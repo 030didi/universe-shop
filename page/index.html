@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kosmos</title>
+    <style>
+        @import url(../assets/CSS/index.css);
+    </style>
+    <script src="https://code.iconify.design/iconify-icon/2.2.0/iconify-icon.min.js"></script>
+    <!-- 引入 jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../assets/JS/index.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <!--  header 中內容 -->
+        <div>
+            <h1>KOSMOS</h1>
+        </div>
+        <div>
+            <form>
+                <input type="search" placeholder="請輸入搜尋名稱" />
+                <button><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </header>
+
+    <nav>
+        <!-- 指到冷門商品 -->
+    </nav>
+
+    <article>
+        <!-- 內文 -->
+    </article>
+
+    <aside>
+        <!-- 菜單欄 -->
+        <!-- 使用 checkbox 來做開關 -->
+        <input type="checkbox" name="" id="sideMenu-active">
+
+        <div class="sideMenu">
+            <form>
+                <input type="search" placeholder="請輸入搜尋名稱">
+                <button><i class="fas fa-search"></i></button>
+            </form>
+            <nav>
+                <a href="#">
+                    <Icon class="fas" icon="solar:planet-2-bold" width="24" height="24" />星系一
+                </a>
+                <a href="#">
+                    <Icon class="fas" icon="solar:planet-2-bold" width="24" height="24" /></i>星系二
+                </a>
+                <a href="#"><i class="fas fa-book-reader"></i>收藏的愛妃</a>
+                <a href="#"><i class="fas fa-user-graduate"></i>星系評價</a>
+                <a href="#"><i class="fas fa-trophy"></i>關於我們</a>
+            </nav>
+            <label for="sideMenu-active">
+                <i class="fas fa-angle-right"></i>
+            </label>
+            <!-- label 寫在 nav 下方是為了比較好看到 -->
+        </div>
+    </aside>
+
+    <footer></footer>
+</body>
+
+</html>
