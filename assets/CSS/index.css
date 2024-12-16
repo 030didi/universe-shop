@@ -117,14 +117,14 @@ nav {
         position: relative;
 
 
-        Icon {
+        i {
             margin-right: -1.1em;
             transform: scale(0);
             /* 使圖示消失 */
             transition: 0.3s;
         }
 
-        &:hover Icon {
+        &:hover i {
             /* 使文字回到原來的位置 */
             margin-right: 0em;
             /* 使圖示出現 */
