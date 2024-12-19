@@ -11,19 +11,33 @@ header {
 
 /* 總之是商品的css影該不會撞名吧 */
 .content-container {
-    display: flex;
-    justify-content: space-between; /* 使兩個元素分開 */
-    align-items: flex-start; /* 垂直對齊到頂部 */
+    /* display: flex; */
+    /* justify-content: space-between; 使兩個元素分開 */
+    /* align-items: flex-start; 垂直對齊到頂部 */
+    flex-grow: 1; /* 使內容區域填滿剩餘的空間 */ 
 }
 article {
     flex: 1; /* 讓 <article> 占據剩餘的空間 */
     padding: 20px;
-    background-color: #f4f4f4; /* 增加背景色來區分 */
+    background-color: #ccb2b2; /* 增加背景色來區分 */
 }
 .Productbox{
     margin: 20%;
     background-color: #182937;
 }
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+body {
+    display: flex; /*使物件依序排列*/
+    flex-direction: column; /*使物件垂直排列*/
+    justify-content: space-between; /* 保證內容區域和footer能適當分開 */
+    justify-content: flex-start;
+}
+
 
 
 /* 側邊選單 */
@@ -169,10 +183,21 @@ article {
 }
 
 
-footer {
+/* footer {
     text-align: center;
     height: auto;
     font-size: 12px;
     padding: 10px 0;
     background-color: #182937;
+} */
+footer {
+    text-align: center;
+    font-size: 12px;
+    padding: 10px 0;
+    background-color: #182937;
+    position: relative; /* 保證 footer 不會被推到視窗外 */
+    flex-shrink: 0; /* 防止footer被縮小 */
+    position: fixed; /* 固定在頁面底部 */
+    bottom: 0; /* 距離底部為0 */
+    width: 100%; /* 設置footer寬度為100% */
 }
