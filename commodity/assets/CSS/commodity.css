@@ -19,11 +19,15 @@ header {
 article {
     flex: 1; /* 讓 <article> 占據剩餘的空間 */
     padding: 20px;
-    background-color: #ccb2b2; /* 增加背景色來區分 */
+    /* background-color: #dde4ee; 增加背景色來區分 */
 }
-.Productbox{
-    margin: 20%;
-    background-color: #182937;
+
+.Productbox {
+    margin: 3%;
+    background: #182937; /* 背景顏色 */
+    border: 2px solid transparent; /* 邊框透明，保持形狀但不顯示顏色 */
+    border-radius: 50px; /* 邊框圓角 */
+    box-sizing: border-box; /* 確保背景顏色不會超出邊框 */
 }
 html, body {
     height: 100%;
