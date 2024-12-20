@@ -29,12 +29,31 @@
         .wrapper{
              flex-grow: 1; 
         }
-        .padding-1{
-            padding-top: 25px;
-            padding-right: 50px;
-            padding-bottom: 25px;
-            padding-left: 50px;
+        .padding-1 {
+            padding: 25px;
+            display: flex;  /* 使用 flexbox 來排佈 */
+            justify-content: space-between;  /* 讓圖片和介紹區塊有適當的間距 */
+            align-items: flex-start;  /* 將圖片和介紹對齊到頂部 */
+        }
 
+        .padding-2 {
+             margin-bottom: 15px;  /* 給每個介紹區塊一些底部間距 */
+        }
+
+        .product-info {
+             display: flex;
+             flex-direction: column;  /* 讓介紹部分垂直排列 */
+             width: 50%;  /* 使介紹區塊佔據一半的寬度，您可以根據需要調整 */
+        }
+
+        img {
+             border-radius: 50px;  /* 圓角圖片 */
+             width: 100%;  /* 使圖片寬度自適應 */
+             height: auto;  /* 高度自動調整以保持圖片比例 */
+        }
+        h1,p{
+            color: #ffffff;
+            text-align: center;
         }
     </style>
         
@@ -123,16 +142,23 @@
         <div class="c">
             <div class="Productbox">
                 <!-- 商品頁面 -->
-                <div class="padding-1">
                 <article>
+                <div class="padding-1">
                     <img src="../commodity/assets/IMG/commodity1.jpg" height="400" width="500" style="border-radius: 50px;" alt="商品1">
-                
-                <h1>產品特色</h1>
-                <h1>相關推薦</h1>
- 
-                
-                </article>
+
+                    <div class="padding-2">
+                    <p>產品特色
+                    相關推薦
+                    </p>
+                    </div>
+
+                    <div class="padding-2">
+                        <p>產品特色
+                        相關推薦
+                        </p>
+                        </div>
                 </div>
+                </article>
             </div>
 
             <article>
