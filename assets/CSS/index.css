@@ -3,35 +3,94 @@
     padding: 0;
 }
 
+html,
+body {
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 header {
     color: white;
     background-color: black;
+    display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+    z-index: 1;
+
+    h1 {
+        font-style: italic;
+    }
+
+    .search {
+        flex: 1;
+        text-align: center;
+    }
+
+    .search-input {
+        border-radius: 21px;
+        /* 調整這個值來改變橢圓的形狀 */
+        padding: 2px 20px;
+        /* 調整內邊距來改變輸入框的高度和寬度 */
+        border: 1px solid #a93535;
+        /* 邊框顏色和樣式 */
+        outline: none;
+        /* 移除輸入框的默認外框 */
+    }
+
+    .icon {
+        display: flex;
+        gap: 10px;
+        /* 在圖示之間添加空隙 */
+    }
+
+}
+
+aside {
+    overflow: auto;
+}
+
+article {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    /* 使內容可滾動 */
 }
 
 /* 側邊選單 */
 /* 主選單 */
 .sideMenu {
-    width: 300px;
+    width: 250px;
     height: 100%;
-    min-height: 430px;
     background-color: #b1bed2;
     border-right: 3px solid #d1d1d1;
     display: flex;
     /* 主軸 */
     flex-direction: column;
-    padding: 50px 0;
     box-shadow: 5px 0 5px rgba(23, 23, 54, 0.6);
-    /* label 定位在這個上 */
-    position: relative;
+    position: absolute;
+    top: 59px;
+    bottom: 10px;
+    left: 0;
+    z-index: 0;
+
     /* 將 sideMenu 左橫移 100%，使他到螢幕外 */
     transform: translateX(-100%);
     /* 側邊選單收合的時間差 */
     transition: 0.5s;
 
     p {
+        text-align: center;
         display: flex;
-        padding: 0px 110px 10px;
+        padding: 10px 90px;
         font-style: italic;
     }
 
@@ -154,7 +213,6 @@ header {
 
 footer {
     text-align: center;
-    height: auto;
     font-size: 12px;
     padding: 10px 0;
     background-color: #182937;
