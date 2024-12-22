@@ -106,11 +106,11 @@ article {
         width: 20px;
         height: 80px;
         background-color: #b1bed2;
-        color: #182937;
+        color: #477aa4;
         /* 絕對定位在 sideMenu 上 */
         position: absolute;
         right: -20px;
-
+        top: 0;
         margin: auto;
         line-height: 80px;
         text-align: center;
