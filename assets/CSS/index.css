@@ -39,6 +39,17 @@ header {
         /* 邊框顏色和樣式 */
         outline: none;
         /* 移除輸入框的默認外框 */
+        width: 500px;
+    }
+
+    button {
+        background-color: transparent;
+        /* 設置背景顏色為透明 */
+        border: none;
+        /* 移除邊框 */
+        cursor: pointer;
+        /* 設置鼠標樣式為指針 */
+        color: white;
     }
 
     .icon {
