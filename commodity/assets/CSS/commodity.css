@@ -14,196 +14,24 @@ header {
     /* display: flex; */
     /* justify-content: space-between; 使兩個元素分開 */
     /* align-items: flex-start; 垂直對齊到頂部 */
-    flex-grow: 1; /* 使內容區域填滿剩餘的空間 */ 
+    /* flex-grow: 1; 使內容區域填滿剩餘的空間  */
 }
+
 article {
-    flex: 1; /* 讓 <article> 占據剩餘的空間 */
+    flex: 1;
+    /* 讓 <article> 占據剩餘的空間 */
     padding: 20px;
     /* background-color: #dde4ee; 增加背景色來區分 */
 }
 
 .Productbox {
     margin: 7%;
-    background: #dddddd; /* 背景顏色 */
-    border: 2px solid transparent; /* 邊框透明，保持形狀但不顯示顏色 */
-    border-radius: 50px; /* 邊框圓角 */
-    box-sizing: border-box; /* 確保背景顏色不會超出邊框 */
-}
-html, body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
-body {
-    display: flex; /*使物件依序排列*/
-    flex-direction: column; /*使物件垂直排列*/
-    justify-content: space-between; /* 保證內容區域和footer能適當分開 */
-    justify-content: flex-start;
-}
-
-
-
-
-
-/* 側邊選單 */
-/* 主選單 */
-.sideMenu {
-    width: 300px;
-    height: 100%;
-    min-height: 430px;
-    background-color: #b1bed2;
-    border-right: 3px solid #d1d1d1;
-    display: flex;
-    /* 主軸 */
-    flex-direction: column;
-    padding: 50px 0;
-    box-shadow: 5px 0 5px rgba(23, 23, 54, 0.6);
-    /* label 定位在這個上 */
-    position: relative;
-    /* 將 sideMenu 左橫移 100%，使他到螢幕外 */
-    transform: translateX(-100%);
-    /* 側邊選單收合的時間差 */
-    transition: 0.5s;
-
-    p {
-        display: flex;
-        padding: 0px 110px 10px;
-        font-style: italic;
-    }
-
-    a,
-    label {
-        cursor: pointer;
-    }
-
-    label {
-        width: 20px;
-        height: 80px;
-        background-color: #b1bed2;
-        color: #182937;
-        /* 絕對定位在 sideMenu 上 */
-        position: absolute;
-        right: -20px;
-        top: -403px;
-        bottom: 0;
-        margin: auto;
-        line-height: 80px;
-        text-align: center;
-        border-radius: 0 5px 5px 0;
-        box-shadow: 5px 0 5px rgba(23, 23, 54, 0.6);
-    }
-}
-
-#sideMenu-active:checked+.sideMenu {
-    transform: translateX(0);
-
-    /* 當我點擊 sideMenu 時，checkbox 會啟動 id，讓側邊選單跑出來 */
-    label .fas {
-        /* 使 label 裡的圖案橫向反轉 */
-        transform: scaleX(-1);
-    }
-}
-
-#sideMenu-active {
-    position: absolute;
-    /* 使 checkbox 變透明 */
-    opacity: 0;
-    /* 為了保險不要讓該功能還選得到，可將其排序往後跳 */
-    z-index: -1;
-}
-
-.side {
-    a {
-        text-decoration: none;
-        font-weight: 300;
-        display: block;
-        color: #151626;
-        padding: 20px 10px;
-        position: relative;
-
-        /* 將 border-top 新增到每個選單項目的底部 */
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 10px;
-            right: 10px;
-            border-top: 1px dashed #ffffff;
-            transform: scaleX(0);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        /* 選單項目的懸停狀態 */
-        &:hover::after {
-            transform: scaleX(1);
-        }
-
-        i {
-            margin-right: -1.1em;
-            transform: scale(0);
-            /* 使圖示消失 */
-            transition: 0.3s;
-        }
-
-        &:hover i {
-            /* 使文字回到原來的位置 */
-            margin-right: 0em;
-            /* 使圖示出現 */
-            transform: scale(1);
-        }
-
-        &+a::before {
-            content: "";
-            position: absolute;
-            left: 10px;
-            right: 10px;
-            top: 0px;
-        }
-    }
-}
-
-/* 子選單的樣式 */
-.submenu {
-    position: relative;
-}
-
-.submenu-items {
-    display: none;
-    padding-left: 20px;
-    background-color: #98a3b3;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    height: 0;
-    overflow: hidden;
-
-    a {
-        color: #f2e0dc;
-    }
-}
-
-.submenu.active .submenu-items {
-    display: block;
-    opacity: 1;
-    height: auto;
-}
-
-
-/* footer {
-    text-align: center;
-    height: auto;
-    font-size: 12px;
-    padding: 10px 0;
-    background-color: #182937;
-} */
-footer {
-    text-align: center;
-    font-size: 12px;
-    padding: 10px 0;
-    background-color: #182937;
-    position: relative; /* 保證 footer 不會被推到視窗外 */
-    flex-shrink: 0; /* 防止footer被縮小 */
-    position: fixed; /* 固定在頁面底部 */
-    bottom: 0; /* 距離底部為0 */
-    width: 100%; /* 設置footer寬度為100% */
+    background: #dddddd;
+    /* 背景顏色 */
+    border: 2px solid transparent;
+    /* 邊框透明，保持形狀但不顯示顏色 */
+    border-radius: 50px;
+    /* 邊框圓角 */
+    box-sizing: border-box;
+    /* 確保背景顏色不會超出邊框 */
 }
