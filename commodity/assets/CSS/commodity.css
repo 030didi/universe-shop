@@ -23,8 +23,8 @@ article {
 }
 
 .Productbox {
-    margin: 3%;
-    background: #182937; /* 背景顏色 */
+    margin: 7%;
+    background: #dddddd; /* 背景顏色 */
     border: 2px solid transparent; /* 邊框透明，保持形狀但不顯示顏色 */
     border-radius: 50px; /* 邊框圓角 */
     box-sizing: border-box; /* 確保背景顏色不會超出邊框 */
@@ -41,6 +41,7 @@ body {
     justify-content: space-between; /* 保證內容區域和footer能適當分開 */
     justify-content: flex-start;
 }
+
 
 
 
