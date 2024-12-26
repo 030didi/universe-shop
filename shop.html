@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kosmos</title>
+    <style>
+        @import url(../assets/CSS/index.css);
+        @import url(../assets/CSS/shop.css);
+    </style>
+    <script src="https://code.iconify.design/iconify-icon/2.2.0/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    <!-- 引入 jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../assets/JS/index.js"></script>
+    <script src="../assets/JS/index.js"></script>
+
+</head>
+
+<body>
+
+    <header id="header">
+        <!-- header 中內容 -->
+
+        <h1>KOSMOS</h1>
+
+        <div class="search">
+            <form>
+                <input type="search" class="search-input" placeholder="請輸入搜尋名稱" />
+                <button><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+
+        <div class="icon">
+            <div class="shop">
+                <a href="#">
+                    <iconify-icon icon="icon-park-twotone:shopping" width="30" height="30" style="color: white;" />
+                </a>
+            </div>
+            <div class="member">
+                <a href="#">
+                    <iconify-icon icon="icon-park-outline:people" width="30" height="30" style="color: white;" />
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- 購物車 -->
+    <div class="container">
+
+        <article>
+            <section class="shopcard">
+                <h2>訂單資訊</h2>
+                <div class="letshop">
+
+                    <!-- 商品項目 -->
+                    <div class="product-item">
+                        <img src="../assets/image/Neptune.jpg" alt="商品圖">
+                        <div class="product">
+                            <p>Neptune</p>
+                            <div class="quantity-control">
+                                <button class="quantity-btn" data-action="decrease">-</button>
+                                <span class="quantity">1</span>
+                                <button class="quantity-btn" data-action="increase">+</button>
+                            </div>
+                            <p>金額：<span class="price">10000000</span></p>
+                        </div>
+                        <button class="delete-button">
+                            <span class="carbon--trash-can"></span>
+                        </button>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="../assets/image/mars.jpg" alt="商品圖">
+                        <div class="product">
+                            <p>Mars</p>
+                            <div class="quantity-control">
+                                <button class="quantity-btn" data-action="decrease">-</button>
+                                <span class="quantity">1</span>
+                                <button class="quantity-btn" data-action="increase">+</button>
+                            </div>
+                            <p>金額：<span class="price">18000000</span></p>
+                        </div>
+                        <button class="delete-button">
+                            <span class="carbon--trash-can"></span>
+                        </button>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="../assets/image/saturn.jpg" alt="商品圖">
+                        <div class="product">
+                            <p>Saturn</p>
+                            <div class="quantity-control">
+                                <button class="quantity-btn" data-action="decrease">-</button>
+                                <span class="quantity">1</span>
+                                <button class="quantity-btn" data-action="increase">+</button>
+                            </div>
+                            <p>金額：<span class="price">20000000</span></p>
+                        </div>
+                        <button class="delete-button">
+                            <span class="carbon--trash-can"></span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 合計金額 -->
+            <div>
+                <p>合計金額：<span id="total">10000000</span></p>
+            </div>
+        </article>
+    </div>
+
+    </article>
+    <aside>
+        <!-- 側邊選單 -->
+        <!-- 菜單欄 -->
+        <!-- 使用 checkbox 來做開關 -->
+        <input type=" checkbox" name="" id="sideMenu-active">
+        <div class="sideMenu">
+            <p>KOSMOS</p>
+            <span class="side">
+                <!-- 主選單1 -->
+                <div class="submenu">
+                    <a href="#">
+                        <i class="fas">
+                            <iconify-icon icon="solar:planet-2-bold" width="24" height="24">
+                        </i>太陽系
+                    </a>
+                    <div class="submenu-items">
+                        <a href="#">水星</a>
+                        <a href="#">金星</a>
+                        <a href="#">火星</a>
+                        <a href="#">木星</a>
+                        <a href="#">土星</a>
+                        <a href="#">天王星</a>
+                        <a href="#">海王星</a>
+                        <a href="#">冥王星</a>
+                    </div>
+                </div>
+                <!-- 主選單2 -->
+                <div class="submenu">
+                    <a href="#">
+                        <i class="fas">
+                            <iconify-icon icon="solar:planet-2-bold" width="24" height="24">
+                        </i>仙女星系
+                    </a>
+                    <div class="submenu-items">
+                        <a href="#">橢圓星系M32</a>
+                        <a href="#">橢圓星系M110</a>
+                        <a href="#">矮橢球星系NGC 185</a>
+                    </div>
+                </div>
+                <a href="#"><i class="fas"><iconify-icon icon="icon-park-outline:oval-love" width="24"
+                            height="24" /></i>收藏的愛妃</a>
+                <a href="#"><i class="fas"><iconify-icon icon="carbon:star-review" width="24" height="24" /></i>星系評價</a>
+                <a href="#"><i class="fas"><iconify-icon icon="mdi:about-circle-outline" width="24"
+                            height="24" /></i>關於我們</a>
+            </span>
+            <!-- 側欄箭頭按鈕 -->
+            <a href="#header">
+                <label for="sideMenu-active">
+                    <i class="fas fa-angle-right"></i>
+                </label>
+            </a>
+            <!-- label 寫在 nav 下方是為了比較好看到 -->
+        </div>
+    </aside>
+    </div>
+
+
+
+    <footer style="margin-top: 0;">
+        聯絡我們：a12345678@gmail.com
+        關於我們
+    </footer>
+</body>
+
+</html>
