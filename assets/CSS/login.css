@@ -62,7 +62,7 @@ header {
 
 .container {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 0px auto;
     flex: 1;
 }
 
@@ -77,6 +77,138 @@ article {
     overflow-y: auto;
     /* 使內容可滾動 */
 }
+
+/* 總體樣式 */
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #b1bed2;
+
+    h2 {
+        text-align: center;
+        padding: 10px;
+    }
+
+    hr {
+        margin: 10px;
+    }
+
+    /* 切換按鈕 */
+    .form-switch {
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .form-switch button {
+        flex: 1;
+        padding: 10px;
+        background-color: #f8f8f8;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+    }
+
+    .form-switch button.active {
+        background-color: #7591bb;
+        color: white;
+        font-weight: bold;
+    }
+
+    .form-switch button:hover:not(.active) {
+        background-color: #ddd;
+    }
+
+    /* 表單內容 */
+    #formContent {
+        padding: 20px;
+        position: relative;
+        height: 400px;
+        /* 固定高度以便動畫平滑 */
+    }
+
+    .form {
+        display: none;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .form.active {
+        display: block;
+        opacity: 1;
+    }
+
+    /* 表單元素 */
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .form-group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .form-group label {
+        flex-basis: 30%;
+        text-align: right;
+        font-size: 15px;
+        color: #333;
+    }
+
+    .form-group input {
+        flex-grow: 1;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 14px;
+        outline: none;
+    }
+
+
+
+    form input:focus {
+        border-color: #7591bb;
+    }
+
+    form .check {
+        padding: 10px;
+    }
+
+
+    form button {
+        padding: 10px;
+        align-items: center;
+        border: none;
+        border-radius: 5px;
+        background-color: #4C7097;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+
+
+    form button:hover {
+        background-color: #7591bb;
+    }
+
+}
+
+
 
 /* 側邊選單 */
 /* 主選單 */
