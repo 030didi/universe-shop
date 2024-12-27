@@ -21,6 +21,18 @@ header {
     padding: 10px 10px;
     z-index: 1;
 
+    a {
+        text-decoration: none;
+        /* 去掉底線 */
+        color: inherit;
+        /* 使顏色繼承自父元素，避免變色 */
+    }
+
+    a:hover {
+        color: inherit;
+        /* 在懸停時也不改變顏色 */
+    }
+
     h1 {
         font-style: italic;
     }
