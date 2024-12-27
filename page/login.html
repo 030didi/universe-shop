@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <style>
+        @import url(../assets/CSS/login.css);
+    </style>
+    <script src="https://code.iconify.design/iconify-icon/2.2.0/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- 引入 jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../assets/JS/login.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <!-- header 中內容 -->
+
+        <h1>KOSMOS</h1>
+
+        <div class="search">
+            <form>
+                <input type="search" class="search-input" placeholder="請輸入搜尋名稱" />
+                <button><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+
+        <div class="icon">
+            <div class="shop">
+                <a href="#">
+                    <iconify-icon icon="icon-park-twotone:shopping" width="30" height="30" style="color: white;" />
+                </a>
+            </div>
+            <div class="member">
+                <a href="#">
+                    <iconify-icon icon="icon-park-outline:people" width="30" height="30" style="color: white;" />
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <article>
+            <section class="data">
+                <div class="form-container">
+                    <div class="form-switch">
+                        <button id="loginSwitch" class="active">登入</button>
+                        <button id="registerSwitch">註冊</button>
+                    </div>
+
+                    <div id="formContent">
+                        <div id="loginForm" class="form active">
+                            <h2>登入</h2>
+                            <hr>
+                            <form>
+                                <div class="form-group">
+                                    <label for="loginEmail">電子郵件</label>
+                                    <input type="email" id="loginEmail" placeholder="請輸入電子郵件" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="loginPassword">密碼</label>
+                                    <input type="password" id="loginPassword" placeholder="請輸入密碼" required>
+                                </div>
+                                <button onclick="javascript:location.href='../page/member.html'"
+                                    type="submit">登入</button>
+                            </form>
+                        </div>
+
+                        <div id="registerForm" class="form">
+                            <h2>註冊</h2>
+                            <hr>
+                            <form>
+                                <div class="form-group">
+                                    <label for="registerName">姓名</label>
+                                    <input type="text" id="registerName" placeholder="請輸入姓名" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="registerEmail">電子郵件</label>
+                                    <input type="email" id="registerEmail" placeholder="請輸入電子郵件" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="registerPassword">密碼</label>
+                                    <input type="password" id="registerPassword" placeholder="請輸入密碼" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="registerConfirmPassword">確認密碼</label>
+                                    <input type="password" id="registerConfirmPassword" placeholder="請再次輸入密碼" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="registerPhone">手機</label>
+                                    <input type="text" id="registerPhone" placeholder="請輸入手機號碼" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="registerID">身分證</label>
+                                    <input type="text" id="registerID" placeholder="請輸入身分證字號/ID" required>
+                                </div>
+                                <div class="check"><input type="checkbox">我願意接受Kosmos的各種好禮資訊與剝削</div>
+
+                                <button onclick="javascript:location.href='../page/member.html'"
+                                    type="submit">註冊</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+
+        <aside>
+            <!-- 側邊選單 -->
+            <!-- 菜單欄 -->
+            <!-- 使用 checkbox 來做開關 -->
+
+            <input type="checkbox" name="" id="sideMenu-active">
+            <div class="sideMenu">
+                <p>KOSMOS</p>
+                <span class="side">
+                    <!-- 主選單1 -->
+                    <div class="submenu">
+                        <a href="#">
+                            <i class="fas">
+                                <iconify-icon icon="solar:planet-2-bold" width="24" height="24">
+                            </i>太陽系
+                        </a>
+                        <div class="submenu-items">
+                            <a href="#">水星</a>
+                            <a href="#">金星</a>
+                            <a href="#">火星</a>
+                            <a href="#">木星</a>
+                            <a href="#">土星</a>
+                            <a href="#">天王星</a>
+                            <a href="#">海王星</a>
+                            <a href="#">冥王星</a>
+                        </div>
+                    </div>
+                    <!-- 主選單2 -->
+                    <div class="submenu">
+                        <a href="#">
+                            <i class="fas">
+                                <iconify-icon icon="solar:planet-2-bold" width="24" height="24">
+                            </i>仙女星系
+                        </a>
+                        <div class="submenu-items">
+                            <a href="#">橢圓星系M32</a>
+                            <a href="#">橢圓星系M110</a>
+                            <a href="#">矮橢球星系NGC 185</a>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fas"><iconify-icon icon="icon-park-outline:oval-love" width="24"
+                                height="24" /></i>收藏的愛妃</a>
+                    <a href="#"><i class="fas"><iconify-icon icon="carbon:star-review" width="24"
+                                height="24" /></i>星系評價</a>
+                    <a href="#"><i class="fas"><iconify-icon icon="mdi:about-circle-outline" width="24"
+                                height="24" /></i>關於我們</a>
+                </span>
+                <!-- 側欄箭頭按鈕 -->
+                <a href="#header">
+                    <label for="sideMenu-active">
+                        <i class="fas fa-angle-right"></i>
+                    </label>
+                </a>
+                <!-- label 寫在 nav 下方是為了比較好看到 -->
+            </div>
+
+        </aside>
+    </div>
+
+    <footer style="margin-top: 0;">
+        聯絡我們：a12345678@gmail.com
+        關於我們
+    </footer>
+</body>
+
+</html>
