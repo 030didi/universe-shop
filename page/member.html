@@ -11,6 +11,9 @@
     <script src="https://code.iconify.design/iconify-icon/2.2.0/iconify-icon.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
+    <!-- SweetAlert2 的腳本 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
     <!-- 引入 jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../assets/JS/member.js"></script>
@@ -47,7 +50,109 @@
 
     <div class="container">
         <article>
+            <section>
+                <h2>會員中心</h2>
+                <div class="outbox">
+                    <div class="information">
+                        <img src="../assets/image/popo .jpg">
+                        <div class="data">
+                            <p>姓名：小明</p>
+                            <p>身分證：A000000000</p>
+                            <p>生日：????/??/??</p>
+                            <p>電子郵件：12x3x4@gmail.com</p>
+                            <p>電話：0912345678</p>
+                            <p>地址：台北市大頭區</p>
+                        </div>
+                    </div>
 
+                    <p class="head">會籍資訊</p>
+                    <hr>
+                    <div class="box-top">
+                        <table>
+                            <tr>
+                                <th>會員等級</th>
+                                <th>會員編號</th>
+                                <th>加入日期</th>
+                                <th>到期日期</th>
+                                <th></th>
+                                <th>年度累積消費：</th>
+                            </tr>
+                            <tr>
+                                <td>VIP</td>
+                                <td>A12345678</td>
+                                <td>20??/10/10</td>
+                                <td>20?i/10/10</td>
+                                <td></td>
+                                <td>$999999999</td>
+                            </tr>
+                        </table>
+                        <div class="vip"><button onclick="showAlert()">升級成VVIP</button></div>
+                    </div>
+                    <p class="head">訂單資訊</p>
+                    <hr>
+                    <div class="box">
+                        <table>
+                            <tr>
+                                <th>訂單編號</th>
+                                <th>訂單日期</th>
+                                <th>訂單金額</th>
+                                <th>訂單狀態</th>
+                                <th>訂單明細</th>
+                            </tr>
+                            <tr>
+                                <td>011223344</td>
+                                <td>20??/??/??</td>
+                                <td>$999999999</td>
+                                <td>火速配達您的宇宙，請勿催送</td>
+                                <td><button onclick="showAlert()">查看</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <p class="head">歷史訂單</p>
+                    <hr>
+                    <div class="box">
+                        <table>
+                            <tr>
+                                <th>訂單編號</th>
+                                <th>訂單日期</th>
+                                <th>訂單金額</th>
+                                <th>訂單狀態</th>
+                                <th>訂單明細</th>
+                            </tr>
+                            <tr>
+                                <td>012345678</td>
+                                <td>20??/??/10</td>
+                                <td>$999999999</td>
+                                <td>已完成</td>
+                                <td><button onclick="showAlert()">查看</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <p class="head">歷史評價</p>
+                    <hr>
+                    <div class="box">
+                        <table border="1">
+                            <tr>
+                                <th style="width: 100px;">星系名稱</th>
+                                <th>評價</th>
+                                <th>評價日期</th>
+                            </tr>
+                            <tr>
+                                <td>仙女星系</td>
+                                <td>★★★★★</td>
+                                <td>20??/??/10</td>
+                            </tr>
+                            <tr>
+                                <td>評價內容</td>
+                                <td colspan="2" style="text-align: left;">
+                                    我們普遍認為，若能理解透徹核心原理，對其就有了一定的了解程度。若發現問題比我們想像的還要深奧，那肯定不簡單。說到仙女星系，你會想到什麼呢？尼采講過一段耐人尋思的話，香水不正是被自己的氣味所出賣的。這是撼動人心的。我們不得不面對一個非常尷尬的事實，那就是，問題的核心究竟是什麼？我們都知道，只要有意義，那麼就必須慎重考慮。在人生的歷程中，仙女星系的出現是必然的。我們可以很篤定的說，這需要花很多時間來嚴謹地論證。車爾尼雪夫斯基曾講過，應該堅信，思想和內容不是通過沒頭沒腦的感傷，而是通過思考而得到的。但願各位能從這段話中獲得心靈上的滋長。儘管如此，別人往往卻不這麼想。我們不得不相信，我以為我了解仙女星系，但我真的了解仙女星系嗎？仔細想想，我對仙女星系的理解只是皮毛而已。
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+            </section>
         </article>
         <aside>
             <!-- 側邊選單 -->
