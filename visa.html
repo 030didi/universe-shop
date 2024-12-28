@@ -49,39 +49,46 @@
 
     <div class="container">
         <!-- 購物車 -->
-        <article>
-            <!-- 訂購人資訊 -->
-            <div class="card buyer">
-                <form method="post" action="">
-                    <div class="card-body">
-                        <h3>訂單資訊</h3>
-                        <!-- 訂購人基本資料 -->
-                        <p>姓名：</p><input type="text" name="name" /><br />
-                        <p>電話：</p><input type="text" name="phonenumber" /><br />
-                        <p>電子郵件：</p><input type="text" name="mail" /><br />
-                        <!-- 訂購人付款方式 -->
-                        <input type="radio" name="usetopay" value="VISA" checked />VISA
-                        <input type="radio" name="usetopay" value="cash" />現金交易
 
-                        <br><br>
-                        <p>訂單備註：</p><input type="text" name="note" /><br /><br />
+        <body>
+            <h1>VISA 付款頁面</h1>
+            <div class="card text-left">
+
+
+                <form method="post">
+                    <p>信用卡號碼：</p><input type="text" name="cardnumber" required /><br />
+                    <p>有效日期：</p><input type="text" name="expirydate" required /><br />
+                    <p>安全碼 (CVV)：</p><input type="text" name="cvv" required /><br /><br />
+                    <div class="card text-left">
+
+                        <div class="card-body">
+                            <h3>分期付款</h3><br>
+                            <p>一次付清</p>
+                            <input type="radio" name="creditpay" value="one" />
+                            <p>分三期</p>
+                            <input type="radio" name="creditpay" value="three" />
+                            <p>分六期</p>
+                            <input type="radio" name="creditpay" value="twelve" />
+                            <p>分十二期</p>
+                        </div>
                     </div>
-                    <p class="orderalert">! ! 注意事項： 星球契約將在您下定後以電子郵件寄送至您的信箱</p>
+
+                    <!-- 結帳完成按鈕 -->
+                    <input type="button" id="finishVisaPayment" class="getshop" value="結帳完成">
                 </form>
             </div>
 
+            <script>
+                // VISA 結帳按鈕事件
+                const finishVisaButton = document.getElementById("finishVisaPayment");
+                if (finishVisaButton) {
+                    finishVisaButton.addEventListener("click", function () {
+                        swal("訂單成功！", "感謝您的購買！", "success");
+                    });
+                }
+            </script>
 
-
-
-
-            <!-- 結帳按鈕區 -->
-            <section>
-                <!-- 我再想想按鈕 -->
-                <input type="button" class="getshop" value="我再想想">
-
-                <!-- 結帳按鈕彈跳視窗 -->
-                <input type="button" id="getshop" class="getshop" value="送出結帳">
-            </section>
+        </body>
 
         </article>
 

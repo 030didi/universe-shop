@@ -140,11 +140,31 @@
             </form>
         </section>
 
-        <footer>
-            <button class="action-btn">我再想想</button>
-            <button class="action-btn">送出結帳</button>
-        </footer>
+
+        <button class="action-btn">我再想想</button>
+        <input type="button" value="送出結帳" onclick="getshop()">
+        <button class="action-btn">送出結帳</button>
+
     </div>
+
+    <input type="button" value="使用id取得節點" onclick="getP()">
+    <input type="button" value="使用Tagname取得tr節點" onclick="gettag()">
+
+    <script>
+
+        function getP() {
+            var pNode = document.getElementById("paragraph");
+            alert(pNode.nodeName + ":" + pNode.innerHTML);
+        }
+
+        function gettag() {
+            var tr = document.getElementsByTagName("tr");
+            alert("tr元素有: " + tr.length + ":" + tr[0].innerHTML);
+        }
+
+
+    </script>
+
 
 </body>
 

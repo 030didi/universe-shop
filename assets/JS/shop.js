@@ -33,69 +33,23 @@ document.addEventListener('DOMContentLoaded', function () {
             adjustHeights();
         });
     });
-
-    // 初始調整高度
-    adjustHeights();
-
-
-
-
-// 選取 .shopcard 區塊
-const shopcard = document.querySelector(".shopcard");
-
-// 購物車功能邏輯
-shopcard.addEventListener("click", (event) => {
-    const target = event.target;
-
-    // 處理數量增減
-    if (target.classList.contains("quantity-btn")) {
-        const action = target.dataset.action;
-        const productItem = target.closest(".product-item");
-        const quantitySpan = productItem.querySelector(".quantity");
-        const priceSpan = productItem.querySelector(".price");
-        let quantity = parseInt(quantitySpan.textContent);
-
-        if (action === "increase") {
-            quantity++;
-        } else if (action === "decrease" && quantity > 1) {
-            quantity--;
-        }
-
-        quantitySpan.textContent = quantity;
-        updateTotal();
-    }
-
-    // 處理商品刪除
-    if (target.classList.contains("delete-button") || target.closest(".delete-button")) {
-        const productItem = target.closest(".product-item");
-        productItem.remove();
-        updateTotal();
-    }
-});
-
-// 更新總金額
-function updateTotal() {
-    const productItems = document.querySelectorAll(".product-item");
-    let total = 0;
-
-    productItems.forEach((item) => {
-        const price = parseInt(item.querySelector(".price").textContent, 10);
-        const quantity = parseInt(item.querySelector(".quantity").textContent, 10);
-
-        if (!isNaN(price) && !isNaN(quantity)) {
-            total += price * quantity;
+    // 結帳按鈕事件
+    const getShopButton = document.getElementById("getshop");
+if (getShopButton) {
+    getShopButton.addEventListener("click", function () {
+        const paymentMethod = document.querySelector('input[name="usetopay"]:checked').value;
+        if (paymentMethod === "VISA") {
+            window.location.href = "visa.html";
+        } else if (paymentMethod === "cash") {
+            swal("付款完成！", "可在會員中心確認訂單資訊！", "success");
         }
     });
 
-    const totalElement = document.querySelector("#total");
-    totalElement.textContent = total;
 
-    if (productItems.length === 0) {
-        totalElement.textContent = "0";
-        alert("購物車已清空！");
-    }
+    
 }
 
-
-
+    // 初始調整高度
+    adjustHeights();
 });
+
