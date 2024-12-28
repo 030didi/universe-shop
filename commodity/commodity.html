@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kosmos</title>
+    <style>
+        @import url(../commodity/assets/CSS/commodity.css);
+    </style>
+    <script src="https://code.iconify.design/iconify-icon/2.2.0/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- 引入 jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../commodity/assets/JS/commodity.js"></script>
+
+    <style>
+        .star {
+            color: gray;
+            font-size: 50px;
+            margin: 5px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .star.selected {
+            color: gold;
+        }
+
+        .star:hover {
+            color: gold;
+            /* 懸停時顯示金色 */
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-auto-rows: 1fr 1fr;
+        }
+
+        .grid-1 {
+            padding: 65px;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            justify-content: space-between;
+            /* 讓圖片和介紹區塊有適當的間距 */
+            align-items: flex-start;
+            /* 將圖片和介紹對齊到頂部 */
+            font-size: 28px;
+        }
+
+        
+        img {
+            border-radius: 50px;
+            /* 圓角圖片 */
+            width: 90%;
+            /* 使圖片寬度自適應 */
+            height: auto;
+            /* 高度自動調整以保持圖片比例 */
+        }
+
+        .two {
+            border-bottom: 5px solid #5e5e5e;
+            font-weight: bold;
+        }
+
+        .arcticons--idealo-shopping {
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' d='M39.048 29.602H22.615c-.645 0-1.142-.57-1.054-1.21l2.481-18.048a.613.613 0 0 0-.607-.696h-3.5'/%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' d='M23.752 12.453h17.955c.47 0 .838.408.789.876l-1.002 9.55a2.024 2.024 0 0 1-2.012 1.812H22.07m-4.491-8.185H12.07m4.546 6.438H5.5'/%3E%3Cellipse cx='21.66' cy='35.526' fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' rx='3.086' ry='2.588' transform='rotate(-42.481 21.66 35.525)'/%3E%3Cellipse cx='36.295' cy='35.526' fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' rx='3.086' ry='2.588' transform='rotate(-42.481 36.295 35.526)'/%3E%3C/svg%3E");
+            background-color: currentColor;
+            -webkit-mask-image: var(--svg);
+            mask-image: var(--svg);
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-size: 100% 100%;
+            mask-size: 100% 100%;
+        }
+
+        .introduce{
+            margin: 7%;
+            /* background: #dddddd;
+            border-radius: 50px;
+            box-sizing: border-box;
+            padding: 65px; */
+           
+        }
+
+        .recommend{
+            margin: 7%;
+        }
+
+        .flex{
+         margin:0 auto;
+         width:900px;
+         overflow:hidden; /* 當內容的<div>使用 Float 的時候 #WRAPPER 的高度會消失 */
+                  /* 使用 overflow:hidden; 即可破解這個問題 */ 
+         background-color:#ffffff; padding-top:20px; padding-bottom:20px; 
+        }
+
+    </style>
+    
+</head>
+
+<body>
+    <header id="header">
+        <!-- header 中內容 -->
+
+        <h1>KOSMOS</h1>
+
+        <div class="search">
+            <form>
+                <input type="search" class="search-input" placeholder="請輸入搜尋名稱" />
+                <button><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+
+        <div class="icon">
+            <div class="shop">
+                <a href="#">
+                    <iconify-icon icon="icon-park-twotone:shopping" width="30" height="30" style="color: white;" />
+                </a>
+            </div>
+            <div class="member">
+                <a href="#">
+                    <iconify-icon icon="icon-park-outline:people" width="30" height="30" style="color: white;" />
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+<!-- 商品 -->
+        <article>
+            <div class="content-container">
+                <div class="wrapper">
+        
+        
+        
+                    <!-- <aside></aside> -->
+                    <!-- 內文 -->
+                    <div class="c">
+                        <div class="Productbox">
+                            <!-- 商品頁面 -->
+                            <article>
+                                <div class="grid-1">
+                                    <img src="../commodity/assets/IMG/commodity1.jpg" alt="商品1">
+        
+                                    <div class="grid-2">
+                                        <div class="two">&nbsp;&nbsp;
+                                            <a href="../commodity/index.html" class="color">首頁/</a>
+                                            <a href="../galaxy/galaxy.html" class="color">星系一</a><br>
+                                            <span style="font-size: 85px;">商品一</span>
+                                        </div>
+                                        <div class="buy"><span style="font-size: 40px;">NT$10000000</span><br>
+                                            商品規格:?g<br>
+                                            <div id="rating">
+                                                <span class="star" data-value="1">&#9733;</span>
+                                                <span class="star" data-value="2">&#9733;</span>
+                                                <span class="star" data-value="3">&#9733;</span>
+                                                <span class="star" data-value="4">&#9733;</span>
+                                                <span class="star" data-value="5">&#9733;</span>
+                                            </div>
+        
+                                            <script>
+                                                const stars = document.querySelectorAll('.star');
+        
+                                                stars.forEach(star => {
+                                                    star.addEventListener('click', () => {
+                                                        // 清除所有星星的 selected 類
+                                                        stars.forEach(s => s.classList.remove('selected'));
+        
+                                                        // 找到點擊的星星的 data-value，並將其左邊的所有星星標記為 selected
+                                                        const rating = star.getAttribute('data-value');
+                                                        stars.forEach(s => {
+                                                            if (s.getAttribute('data-value') <= rating) {
+                                                                s.classList.add('selected');
+                                                            }
+                                                        });
+        
+                                                        console.log(`Rated: ${rating} stars`);
+                                                    });
+                                                });
+                                            </script>
+                                        </div>
+
+                                        <div>
+                                            
+                                            <button class="add-to-cart" style="padding: 10px 20px; font-size: 20px; background-color: #6b6e6b; color: rgb(255, 255, 255); border: none; cursor: pointer; margin-top: 20px;border-radius: 25px;
+                                            ">
+                                            <!-- <a href="#" data-name="商品一" data-price="10" class="add-to-cart btn btn-primary">  -->
+                                                跟我回家<iconify-icon icon="arcticons:idealo-shopping" width="30" height="30" style="color:  rgb(255, 255, 255);" ></iconify-icon>
+                                                </button>
+                                            <!-- </a> -->
+                                            <!-- position: relative;
+                                            top: 170px; 
+                                            left: 300px; -->
+
+
+                                        </div>
+                                    </div>
+        
+                                </div>
+                            </article>
+                        </div>
+        
+                        <article class="introduce">
+                            <!-- 商品頁面 -->
+                            <h2 style=" border-bottom: 5px solid #5e5e5e;
+                            font-weight: bold; width: 30%;font-size: 50px;">產品特色</h2><br>
+                            <span>媽注程的由進局大會他社高這是後由費的不，理草內商手媽居職標。陸生無提會好氣放年平國題、的公照演了、是慢前最角態足，實生覺條教動如張新又。怕歡灣電我馬過慢歷那自，亮該何裡機其岸：自一比該斷標的人晚細後企了工高，投廣不光，事西相人者有心：地用功資一風人法一大自公理我時口不。商燈少力北們定大。房有兩新！
+                            去可子以國議到立的飛生物，便我說證回投日是細點，講孩人……名有和和其常作特。業畫府步外前，光生人有分好，裡哥文直，有成突一點是經陽容維子得安分人已的來種站一質大。他到看一這書切一雙全，領一民園是並了。息因電界樂車次卻經了男。
+                            </span>
+                        </article>
+        
+        
+                        <article class="recommend">
+                            <!-- 商品頁面 -->
+                            <h2  style=" border-bottom: 5px solid #5e5e5e;
+                            font-weight: bold; width: 30%;font-size: 50px;">相關推薦</h2><br>
+
+                            <div class="flex">
+                                <div class="card">
+                                <img src="/image/Mercury.jpg">
+                                <div class="card-content">
+                                    <h3>Mercury</h3>
+
+                                </div>
+                                </div>
+                                <div class="card">
+                                <img src="/image/Mercury.jpg">
+                                <div class="card-content">
+                                    <h3>水星</h3>
+
+                                </div>
+                                </div>
+                                <div class="card">
+                                <img src="/image/Mercury.jpg">
+                                <div class="card-content">
+                                    <h3>金星</h3>
+
+                                </div>
+                                </div>
+                            </div>
+        
+                        </article>
+                    </div>
+        
+        
+                </div>
+            </div>
+        
+        </article>
+
+<!-- 側欄 -->
+        <aside>
+            <!-- 側邊選單 -->
+            <!-- 菜單欄 -->
+            <!-- 使用 checkbox 來做開關 -->
+            <input type="checkbox" name="" id="sideMenu-active">
+            <div class="sideMenu">
+                <p>KOSMOS</p>
+                <span class="side">
+                    <!-- 主選單1 -->
+                    <div class="submenu">
+                        <a href="#">
+                            <i class="fas">
+                                <iconify-icon icon="solar:planet-2-bold" width="24" height="24">
+                            </i>太陽系
+                        </a>
+                        <div class="submenu-items">
+                            <a href="#">水星</a>
+                            <a href="#">金星</a>
+                            <a href="#">火星</a>
+                            <a href="#">木星</a>
+                            <a href="#">土星</a>
+                            <a href="#">天王星</a>
+                            <a href="#">海王星</a>
+                            <a href="#">冥王星</a>
+                        </div>
+                    </div>
+                    <!-- 主選單2 -->
+                    <div class="submenu">
+                        <a href="#">
+                            <i class="fas">
+                                <iconify-icon icon="solar:planet-2-bold" width="24" height="24">
+                            </i>仙女星系
+                        </a>
+                        <div class="submenu-items">
+                            <a href="#">橢圓星系M32</a>
+                            <a href="#">橢圓星系M110</a>
+                            <a href="#">矮橢球星系NGC 185</a>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fas"><iconify-icon icon="icon-park-outline:oval-love" width="24"
+                                height="24" /></i>收藏的愛妃</a>
+                    <a href="#"><i class="fas"><iconify-icon icon="carbon:star-review" width="24"
+                                height="24" /></i>星系評價</a>
+                    <a href="#"><i class="fas"><iconify-icon icon="mdi:about-circle-outline" width="24"
+                                height="24" /></i>關於我們</a>
+                </span>
+                <!-- 側欄箭頭按鈕 -->
+                <a href="#header">
+                    <label for="sideMenu-active">
+                        <i class="fas fa-angle-right"></i>
+                    </label>
+                </a>
+                <!-- label 寫在 nav 下方是為了比較好看到 -->
+            </div>
+        </aside>
+    </div>
+
+
+
+    <footer style="margin-top: 0;">
+        聯絡我們：a12345678@gmail.com
+        關於我們
+    </footer>
+</body>
+
+</html>
