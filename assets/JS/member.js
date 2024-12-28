@@ -36,4 +36,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 初始調整高度
     adjustHeights();
+
+
+    // 定義 showAlert 函數
+    const showAlert = () => {
+        Swal.fire({
+            icon: 'error',
+            title: '還在維護中，請稍後！',
+            text: 'Thanks for coming!',
+        });
+    };
+
+    // 將 showAlert 函數暴露到全局作用域
+    window.showAlert = showAlert;
 });

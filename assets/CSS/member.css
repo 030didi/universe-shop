@@ -74,7 +74,7 @@ header {
 
 .container {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 0 auto;
     flex: 1;
 }
 
@@ -88,6 +88,106 @@ article {
     grid-column: 2/3;
     overflow-y: auto;
     /* 使內容可滾動 */
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+
+    h2 {
+        position: absolute;
+        top: 65px;
+        left: 13%;
+    }
+}
+
+.outbox {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+    background-color: #adbacf;
+    border-radius: 4%;
+    padding: 30px;
+
+    .information {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    img {
+        width: 250px;
+        border-radius: 100%;
+        grid-column: 1/2;
+    }
+
+    .data {
+        grid-column: 2/3;
+        padding: 25px;
+
+        p {
+            font-size: 20px;
+            margin: 10px;
+        }
+    }
+
+    .head {
+        font-size: 20px;
+        padding: 10px 10px 0px 10px;
+    }
+
+    hr {
+        margin: 10px;
+    }
+
+    .box-top {
+        background-color: #ffffff;
+        padding: 20px 20px 35px 20px;
+        margin: 0 0 20px 0;
+        position: relative;
+    }
+
+    .box {
+        background-color: #ffffff;
+        padding: 20px;
+        margin: 0 0 20px 0;
+        position: relative;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        text-align: center;
+
+    }
+}
+
+.vip {
+    position: absolute;
+    right: 43px;
+    bottom: 5px;
+}
+
+button {
+    border-radius: 10px;
+    border: 0;
+    padding: 10px 20px;
+    background-color: #677ea4;
+    color: white;
+}
+
+button:hover {
+    background-color: #3f4e6b;
+}
+
+button:active {
+    background-color: #1f2e4b;
 }
 
 /* 側邊選單 */
