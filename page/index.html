@@ -14,6 +14,104 @@
     <!-- 引入 jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../assets/JS/index.js"></script>
+
+    <style>
+          body {            
+            margin: 0px;
+        }
+        .slideshow-container{
+          max-width: 1000px;
+          position: relative;
+          margin: 0px auto;
+        }
+        
+        /*按鍵設計*/
+        .pre,.next{
+          position: absolute;
+          top: 50%;
+          padding: 20px;
+          width: auto;
+
+          color: white;
+          font-weight: bold;
+          font-size: 30px;
+          transition: 0.6s ease;
+        }
+
+        .next{
+          right: 0px;
+        }
+        .pre:hover,.next:hover{
+          background-color: rgba(0, 0, 0, 0.494);
+        }
+
+        /*照片動畫*/
+        .mySlides{
+          animation: fade;
+          animation-duration: 1.5s;
+        }
+
+        @keyframes fade{
+          from{opacity: 0.4;}
+          to{opacity: 1;}
+        }
+
+        /*圓點*/
+        .dot{
+          position: relative;
+          height: 10px;
+          width: 10px;
+          margin: 0px 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block ;
+          transition: background-color 0.6s ease;
+        }
+
+        .dot:hover, .active{
+          background-color: #717171;
+        }
+        /* 分隔 */
+
+        .custom-slideshow .custom-slideshow-container {
+          /* max-width: 800px; */
+          position: relative;
+          margin: 0% 4% 0% 0%;
+        }
+
+        .custom-pre, .custom-next {
+          position: absolute;
+          top: 30%;
+          padding: 20px;
+          width: auto;
+          color: white;
+          font-weight: bold;
+          font-size: 30px;
+          transition: 0.6s ease;
+        }
+
+        .custom-next {
+          right: 0px;
+        } 
+
+        .custom-pre:hover, .custom-next:hover {
+          background-color: rgba(0, 0, 0, 0.494);
+        }
+
+        .custom-slide {
+          animation: fadeIn;
+          animation-duration: 1.5s;
+        }
+
+        @keyframes fadeIn {
+          from { opacity: 0.4; }
+          to { opacity: 1; }
+        }
+
+        .LAN-2{
+          margin: 7% 0% 0% 0%;
+        }
+    </style>
 </head>
 
 <body>
@@ -33,7 +131,7 @@
 
         <div class="icon">
             <div class="shop">
-                <a href="../page/shop.html">
+                <a href="#">
                     <iconify-icon icon="icon-park-twotone:shopping" width="30" height="30" style="color: white;" />
                 </a>
             </div>
@@ -49,9 +147,91 @@
 
         <article>
             <div class="box">
-                <section class="LAN">
-                    <!-- LAN請寫 -->
+                <section class="LAN-1">
+                    <div class="slideshow-container">
+                        <div class="mySlides fade">          
+                          <img src="../assets/image/廣告1.jpg" style="width: auto;;height:500px;">          
+                        </div>
+                    
+                        <div class="mySlides fade">          
+                          <img src="../assets/image/廣告2.jpg" style="width: auto;;height:500px;">          
+                        </div>
+                    
+                        <div class="mySlides fade">         
+                          <img src="../assets/image/廣告3.jpg" style="width: auto;;height:500px;">          
+                        </div>
+                
+                        <!--左右按鈕-->
+                        <div class="pre" onclick="plusSlides(-1)">❮</div>
+                        <div class="next" onclick="plusSlides(1)">❯</div> 
+                
+                    </div>      
+                    
+                    <!--顯示圓點-->
+                    <div style="text-align: center;">
+                      <span class="dot" onclick="currentSlide(0)"></span>
+                      <span class="dot" onclick="currentSlide(1)"></span>
+                      <span class="dot" onclick="currentSlide(2)"></span>
+                    </div>
+                
+                    <!-- https://tw.piliapp.com/symbol/ -->
+                
+                    <script>
+                       var slideIndex = 0;
+                       var mytimer=null;
+                       //showSlides(slideIndex);
+                       autoplay(true);
+                
+                       function plusSlides(n){
+                        showSlides(slideIndex+=n);
+                       }
+                
+                       function currentSlide(n){
+                        showSlides(slideIndex=n);
+                       }
+                
+                       function showSlides(n){
+                        clearTimeout(mytimer);
+                        var slides = document.getElementsByClassName("mySlides");
+                        var dots = document.getElementsByClassName("dot")
+                
+                        if(n>=slides.length){
+                        slideIndex = 0;
+                        }
+                        if(n<0){
+                          slideIndex = slides.length-1;
+                        }
+                        for(var i=0; i<slides.length; i++)
+                        {
+                          slides[i].style.display = "none";
+                        }
+                        slides[slideIndex].style.display = "block";
+                
+                        for(var i=0; i<dots.length; i++){
+                          dots[i].className = dots[i].className.replace(" active","");
+                        }
+                        dots[slideIndex].className += " active";
+                       }
+                       function autoplay(isFirst){
+                        var slides = document.getElementsByClassName("mySlides");
+                        
+                        if(isFirst){
+                          slideIndex = 0;
+                        } else {
+                          slideIndex++;
+                        }
+                
+                        if(slideIndex>slides.length){
+                          slideIndex = 0;
+                        }
+                
+                        showSlides(slideIndex);
+                        mytimer = setTimeout("autoplay()",4000);
+                
+                       }
+                    </script>
                 </section>
+
                 <!-- 商品區域 -->
                 <section class="cold">
                     <div class="card-container">
@@ -93,7 +273,9 @@
                     <div class="card-container">
                         <h2>近距離首選</h2>
                         <div class="card">
+                          <a href="../page/Mercury.html">
                             <img src="../assets/image/Mercury.jpg">
+                          </a>
                             <div class="card-content">
                                 <h3>Mercury</h3>
                                 <p>
@@ -106,6 +288,7 @@
                                 </p>
                             </div>
                         </div>
+
                         <div class="card">
                             <img src="../assets/image/mars.jpg">
                             <div class="card-content">
@@ -139,7 +322,97 @@
                         </div>
                     </div>
                 </section>
+
+                
             </div>
+
+            <section class="LAN-2">
+
+              <section class="custom-slideshow">
+                <div class="custom-slideshow-container">
+                    <!-- 第一張圖片 -->
+                    <div class="custom-slide fade">
+                      <a href="../page/commodity.html">
+                        <img src="../assets/image/廣告4.jpg" style="width: 1400px;height:200px;">
+                      </a>
+                      </div>
+            
+                    <!-- 第二張圖片 -->
+                    <div class="custom-slide fade">
+                        <img src="../assets/image/廣告5.jpg" style="width: 1400px;height:200px;">
+                    </div>
+            
+                    <!-- 第三張圖片 -->
+                    <div class="custom-slide fade">
+                        <img src="../assets/image/廣告6.jpg" style="width: 1400px;height:200px;">
+                    </div>
+            
+                    <!-- 左右按鈕 -->
+                    <div class="custom-pre" onclick="changeSlide(-1)">❮</div>
+                    <div class="custom-next" onclick="changeSlide(1)">❯</div>
+                </div>
+            
+              
+            </section>
+            <script>
+              var currentSlideIndex = 0;  // 記錄當前顯示的幻燈片索引
+              var slideTimer = null;       // 用來儲存自動播放定時器
+          
+              autoPlay(true);  // 開始自動播放，從第一張幻燈片開始
+          
+              // 用來切換到下一張或上一張
+              function changeSlide(n) {
+                  showSlide(currentSlideIndex += n);
+              }
+          
+              function showSlide(n) {
+                  clearTimeout(slideTimer);  // 清除之前的定時器
+
+              var slides = document.getElementsByClassName("custom-slide");  // 獲取所有幻燈片
+
+              // 如果索引超過幻燈片數量，重置為第一張
+              if (n >= slides.length) {
+                currentSlideIndex = 0;
+              }
+
+              // 如果索引小於 0，則顯示最後一張幻燈片
+              if (n < 0) {
+                currentSlideIndex = slides.length - 1;
+              }
+
+              // 隱藏所有幻燈片
+              for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+
+              // 顯示當前幻燈片
+              slides[currentSlideIndex].style.display = "block";
+            }
+
+              // 自動播放幻燈片，隔 2 秒切換到下一張
+              function autoPlay(isFirst) {
+                  var slides = document.getElementsByClassName("custom-slide");
+          
+                  if (isFirst) {
+                      currentSlideIndex = 0;
+                  } else {
+                      currentSlideIndex++;
+                  }
+          
+                  // 如果當前索引超過幻燈片數量，則重置為第一張
+                  if (currentSlideIndex >= slides.length) {
+                      currentSlideIndex = 0;
+                  }
+          
+                  showSlide(currentSlideIndex);  // 顯示當前幻燈片
+          
+                  // 設定定時器每 2 秒自動切換幻燈片
+                  slideTimer = setTimeout("autoPlay()", 2000);
+              }
+            </script>
+            
+            </section>
+
 
         </article>
         <aside>

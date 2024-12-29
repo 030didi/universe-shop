@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kosmos</title>
+    <style>
+        @import url(../assets/CSS/galaxy.css);
+    </style>
+    <script src="https://code.iconify.design/iconify-icon/2.2.0/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- 引入 jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../assets/JS/galaxy.js"></script>
+
+    <style>
+        body {
+        background-image: linear-gradient(rgba(36, 36, 36, 0.858), rgba(0, 0, 0, 0.812)),  url('../assets/image/Earth.jpg'); /* 替換成你的圖片路徑 */
+        background-size: cover; /* 讓圖片自動覆蓋整個背景 */
+        background-position: center center; /* 背景圖片置中 */
+        background-attachment: fixed; /* 使背景固定，當滾動時圖片不會移動 */
+        }
+
+
+        .arcticons--idealo-shopping {
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' d='M39.048 29.602H22.615c-.645 0-1.142-.57-1.054-1.21l2.481-18.048a.613.613 0 0 0-.607-.696h-3.5'/%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' d='M23.752 12.453h17.955c.47 0 .838.408.789.876l-1.002 9.55a2.024 2.024 0 0 1-2.012 1.812H22.07m-4.491-8.185H12.07m4.546 6.438H5.5'/%3E%3Cellipse cx='21.66' cy='35.526' fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' rx='3.086' ry='2.588' transform='rotate(-42.481 21.66 35.525)'/%3E%3Cellipse cx='36.295' cy='35.526' fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' rx='3.086' ry='2.588' transform='rotate(-42.481 36.295 35.526)'/%3E%3C/svg%3E");
+            background-color: currentColor;
+            -webkit-mask-image: var(--svg);
+            mask-image: var(--svg);
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-size: 100% 100%;
+            mask-size: 100% 100%;
+        }
+
+        .galaxy {
+            font-size: 100px;
+            position: relative;
+            text-align: center;
+            margin: 7% auto; /* 使元素水平居中 */
+            margin-top: 50px;
+            width: 80%; /* 确保元素有一个宽度 */
+            margin-bottom: 20px;
+        }
+
+        .recommend{
+            margin: 0% 8% 8%;
+        }
+
+        .buyit{
+            margin: 0% 10% 0% 10%;
+            padding: 50px;
+            background-color: #141414;
+            color: #ffffff;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .buyit-1 {
+            margin: 1.8% 10% 1% 10%;
+            padding: 10px;
+            background-color: #d5d5d599;
+            color: #ffffff;
+            font-weight: bold;
+            border-radius: 20px;
+            text-align: center;
+            display: grid;
+            grid-template-columns: 1fr 3fr; /* 创建两个等宽的列 */
+        }
+
+        .star {
+            color:  gold;
+            font-size: 50px;
+        }
+        .NOstar {
+            color:  rgb(102, 102, 102);
+            font-size: 50px;
+        }
+        .where-1{
+            position: relative;
+            bottom: 20px;
+            margin: -28px;
+            right: 25px;
+        }
+        .where-2{
+            position: relative;
+            margin: -5px;
+            right: 90px;
+        }
+        .where-3{
+            position: relative;
+            top: -10px;
+            margin: 0px;
+        }
+        .where-4{
+            position: relative;
+            top: 10px;
+        }
+
+        .wrapperhappy {
+            margin: 0% 7% 7%;
+            padding: 50px;
+            border-radius: 50px;
+            color: #000000;
+            display: grid;
+            grid-template-rows: 3fr 1fr 4fr;
+            grid-template-columns: 2fr 1fr 3fr 2fr;
+        }
+
+        .merged-column {
+            grid-column: 1 / 3; /* 從第 1 列跨越到第 3 列（不包括 3） */
+            grid-row: 1 / 3;
+        }
+
+        .c{
+            grid-column:1 / 2;
+            grid-row: 3 / 4;
+        }
+
+        .b{
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+        }
+
+        .h{
+            grid-column: 3 / 5;
+            grid-row: 2 / 4;
+        }
+
+        .img-1{
+            width: 80%;   /* 使用寬度來控制圖片縮放 */
+            height: auto; /* 自動調整高度以保持等比縮放 */
+        }
+
+        .size-2{
+            width: 350px;
+            height: 350px;
+            border-radius: 0px 20px 0px 0px;
+        }
+
+        
+        .image-container img {
+            width: 100%;  /* 使圖片的寬度等於容器寬度 */
+            height: 100%; /* 使圖片的高度等於容器高度 */
+            object-fit: cover; /* 裁切圖片以填滿容器 */
+        }
+
+
+        .image-overlay {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .image-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.813), rgba(0, 0, 0, 0.049)); /* 漸層效果 */
+            border-radius: 20px 0px 0px 0px; /* 和圖片邊框一致 */
+        }
+
+        a{
+            text-decoration: none; 
+        }
+
+    </style>
+    
+</head>
+
+<body>
+    <header id="header">
+        <!-- header 中內容 -->
+
+        <h1>KOSMOS</h1>
+
+        <div class="search">
+            <form>
+                <input type="search" class="search-input" placeholder="請輸入搜尋名稱" />
+                <button><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+
+        <div class="icon">
+            <div class="shop">
+                <a href="#">
+                    <iconify-icon icon="icon-park-twotone:shopping" width="30" height="30" style="color: white;" />
+                </a>
+            </div>
+            <div class="member">
+                <a href="#">
+                    <iconify-icon icon="icon-park-outline:people" width="30" height="30" style="color: white;" />
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+<!-- 商品 -->
+        <article>
+            <div class="content-container">
+                <div class="wrapper">
+        
+        
+        
+                    <!-- <aside></aside> -->
+                    <!-- 內文 -->
+                    <div class="c">
+                            <!-- 商品頁面 -->
+                        <article class="galaxy">
+                            <div style="border-bottom: 2px solid #ffffff;
+                            font-weight: bold;
+                            width: 100%;
+                            font-size: 110px;
+                            text-align: center;
+                            right: 150px;
+                            margin: 0 auto;
+                            color: #ffffff;">太陽系</div>
+
+                        </article>
+        
+                        <article>
+                            <!-- 商品頁面 -->
+                          <div class="buyit">
+                            如果你在尋找一個既熟悉又充滿驚奇的「家」，那麼我們的太陽系絕對是你的最佳選擇！就像一個舒適的住所，太陽系為你提供了穩定、溫暖的環境，讓你擁有無與倫比的生活品質。這裡不僅有我們所知的地球，還有其他多樣化的星球，等你來探索，保證讓你流連忘返。<br>
+
+                            <span style="color: #9c1f1f;font-size:50px;font-weight: bold;">為什麼選擇太陽系？</span><br>
+                            <span style="color: #ffffff;font-size: 30px;font-weight: bold;">1.溫暖舒適，完美的居住環境</span>
+                            <span style="color: #c8c8c8;font-size:large;font-weight: bold;">
+                             這裡的氣候和環境剛剛好，無需擔心極端天氣。這裡適合各種生命形式，無論是享受寧靜的日常生活還是探索自然奇蹟，都能滿足你對生活品質的所有需求。<br>
+                            </span>
+                               
+                            <span style="color: #ffffff;font-size: 30px;font-weight: bold;">2.離家近，返鄉首選</span> 
+                            <span style="color: #c8c8c8;font-size:large;font-weight: bold;">
+                            無需長途跋涉，太陽系就在這裡，近得讓你感到安心。從太陽到地球，再到各個行星的距離適中，無論是探險還是休息，這裡的環境都讓你覺得親切和舒適。<br>
+                            </span>
+                            <span style="color: #9c1f1f;font-size:30px;font-weight: bold;">現在就來體驗太陽系</span><br>  
+                                
+                               不論你是喜歡穩定的居住環境，還是熱衷於探索未知的奇蹟，太陽系都能給你提供無限可能。從地球的恬靜生活，到其他行星的神秘魅力，這是你理想中的家，無論在哪個角落都充滿了驚喜。
+                                加入我們，與太陽系一起走向未來，讓每一天都充滿發現與冒險！</span>
+                          </div>
+                        </article>
+
+                         <article>
+                            <!-- 商品頁面 -->
+                          <div class="buyit-1">
+                            <div>
+                                <div class="where-1">
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="NOstar">&#9733;</span>
+                                </div>
+                                <div class="where-2">
+                                    <iconify-icon icon="mdi:account-circle" width="30" height="30" style="color:  rgb(255, 255, 255);" ></iconify-icon>
+                                    <span class="where-3">老皮皮</span>
+                                </div>
+                            </div>
+                            <div class="where-4">銀河系離家很近，返鄉方便，四星好評</div>
+                          </div>
+
+                          <div class="buyit-1">
+                          <div>
+                            <div class="where-1">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="NOstar">&#9733;</span>
+                                <span class="NOstar">&#9733;</span>
+                                <span class="NOstar">&#9733;</span>
+                            </div>
+                            <div class="where-2">
+                                <iconify-icon icon="mdi:account-circle" width="30" height="30" style="color:  rgb(255, 255, 255);" ></iconify-icon>
+                                <span class="where-3">劉阿豪</span>
+                            </div>
+                          </div>
+                          <div class="where-4">風水不好，和愛人最美的距離變遠了</div>
+                          </div>
+
+                          <div class="buyit-1">
+                          <div>
+                            <div class="where-1">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                            <div class="where-2">
+                                <iconify-icon icon="mdi:account-circle" width="30" height="30" style="color:  rgb(255, 255, 255);" ></iconify-icon>
+                                <span class="where-3">林志寬</span>
+                            </div>
+                          </div>
+                          <div class="where-4">直達地球，鄰近月亮。完美選擇</div>
+                          </div>
+                        </article>
+        
+                                
+                        <article>
+                        <p style="font-size: 65px;margin: 7% 8% 0% 8%;font-weight: bold;color: #ffffff;">近距離首選</p>
+                        <div class="wrapperhappy">
+                        
+                            <div class="merged-column image-container image-overlay">
+                                <!-- 火星 -->
+                                <a href="../page/Mercury.html">
+                                    <img src="../assets/image/mars.jpg" alt="火星" style="border-radius: 20px 0px 0px 0px;">
+                                </a>
+                                <span style="color: #ffffff;position: relative;bottom: 90px;left: 60px;font-size: 50px;font-weight: bold;">火星</span>
+                            </div>
+
+                            <div style="background-color: #000000b9;padding: 120px 55px 70px 55px;color: #ffffff;font-size: 30px;text-align: center;">
+                               真的很近，買過的都說好<br>
+                               <span style="color: #9c1f1f;font-size: 35px;font-weight: bold;">本星系專屬優惠<br></span>領有銀河系身分證，<br>最低享有七折優惠!<br>
+                               <span style="font-size: 20px;">還不快點手刀下單</span>
+                            </div>
+
+                            <div class="image-container">
+                                <!-- 金星 -->
+                                <a href="../page/commodity.html">
+                                <img src="../assets/image/Venus.jpg" alt="3" class="size-2">
+                                <span style="color: #ffffff;position: relative;bottom: 60px;left: 150px;font-size: 50px;font-weight: bold;">金星</span>
+                                </a>
+                            </div>
+
+                            <div class="c image-container">
+                                <!-- 水星 -->
+                                <a href="../page/Mercury.html">
+                                <img src="../assets/image/Mercury.jpg" alt="4" style="border-radius: 0px 0px 0px 20px;">
+                                <span style="color: #ffffff;position: relative;bottom: 100px;left: 50px;font-size: 50px;font-weight: bold;">水星</span>
+                                </a>
+                            </div>
+
+                            <div class="b" style="background-color: #000000b9;color: #ffffff;font-size: 20px;text-align: center;padding: 90px 0px 0px 0px;">
+                                為甚麼<br>選擇這個?<br>
+                                <span style="color: #9c1f1f;font-size: 20px;font-weight: bold;">因為<br></span>
+                                回<br>家<br>的<br>路<br>，<br>不<br>需<br>要<br>
+                                <span style="color: #9c1f1f;font-size: 20px;font-weight: bold;">
+                                選<br>擇<br>
+                                </span>!
+                            </div>
+
+                            <div class="h image-container">
+                                <!-- 木星 -->
+                                <a href="../page/commodity.html">
+                                <img src="../assets/image/Jupiter商品.jpg" alt="6" style="height: 100%;width:100%;border-radius: 0px 0px 20px 0px;">
+                                <span style="color: #ffffff;position: relative;bottom: 100px;left: 600px;font-size: 50px;font-weight: bold;">木星</span>
+                                </a>
+                            </div>
+
+                          </div>
+                        </article>
+            
+        
+                        <article class="recommend">
+                            <!-- 商品頁面 -->
+                            <h2 style="font-size: 55px;color: #ffffff;">銀河四冠王</h2>
+
+                            <div class="flex">
+                                <div class="card">
+                                <img src="../assets/image/saturn.jpg">
+                                <div class="card-content">
+                                    <h3>saturn</h3>
+
+                                </div>
+                                </div>
+
+                                <div class="card">
+                                <img src="../assets/image/Uranus.jpg">
+                                <div class="card-content">
+                                    <h3>Uranus</h3>
+    
+                                </div>
+                                </div>
+
+                                <div class="card">
+                                <img src="../assets/image/Neptune.jpg">
+                                <div class="card-content">
+                                    <h3>Neptune</h3>
+
+                                </div>
+                                </div>
+                                <div class="card">
+                                <img src="../assets/image/pluto.jpg">
+                                <div class="card-content">
+                                    <h3>Pluto</h3>
+
+                                </div>
+                                </div>
+                            </div>
+        
+                        </article>
+                    </div>
+        
+
+                </div>
+            </div>
+        
+        </article>
+
+
+<!-- 側欄 -->
+        <aside>
+            <!-- 側邊選單 -->
+            <!-- 菜單欄 -->
+            <!-- 使用 checkbox 來做開關 -->
+            <input type="checkbox" name="" id="sideMenu-active">
+            <div class="sideMenu">
+                <p>KOSMOS</p>
+                <span class="side">
+                    <!-- 主選單1 -->
+                    <div class="submenu">
+                        <a href="#">
+                            <i class="fas">
+                                <iconify-icon icon="solar:planet-2-bold" width="24" height="24">
+                            </i>太陽系
+                        </a>
+                        <div class="submenu-items">
+                            <a href="#">水星</a>
+                            <a href="#">金星</a>
+                            <a href="#">火星</a>
+                            <a href="#">木星</a>
+                            <a href="#">土星</a>
+                            <a href="#">天王星</a>
+                            <a href="#">海王星</a>
+                            <a href="#">冥王星</a>
+                        </div>
+                    </div>
+                    <!-- 主選單2 -->
+                    <div class="submenu">
+                        <a href="#">
+                            <i class="fas">
+                                <iconify-icon icon="solar:planet-2-bold" width="24" height="24">
+                            </i>仙女星系
+                        </a>
+                        <div class="submenu-items">
+                            <a href="#">橢圓星系M32</a>
+                            <a href="#">橢圓星系M110</a>
+                            <a href="#">矮橢球星系NGC 185</a>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fas"><iconify-icon icon="icon-park-outline:oval-love" width="24"
+                                height="24" /></i>收藏的愛妃</a>
+                    <a href="#"><i class="fas"><iconify-icon icon="carbon:star-review" width="24"
+                                height="24" /></i>星系評價</a>
+                    <a href="#"><i class="fas"><iconify-icon icon="mdi:about-circle-outline" width="24"
+                                height="24" /></i>關於我們</a>
+                </span>
+                <!-- 側欄箭頭按鈕 -->
+                <a href="#header">
+                    <label for="sideMenu-active">
+                        <i class="fas fa-angle-right"></i>
+                    </label>
+                </a>
+                <!-- label 寫在 nav 下方是為了比較好看到 -->
+            </div>
+        </aside>
+    </div>
+
+
+
+    <footer style="margin-top: 0;">
+        聯絡我們：a12345678@gmail.com
+        關於我們
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,466 @@
+header {
+    color: white;
+    background-color: black;
+    flex-direction: row;
+}
+
+
+/* 商品css */
+.star {
+    color: gray;
+    font-size: 80px;
+    margin: 5px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.star.selected {
+    color: gold;
+}
+
+
+.grid-2 {
+    display: grid;
+    grid-auto-rows: 1fr 2fr;
+}
+
+.grid-1 {
+    padding: 70px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    justify-content: space-between;
+    /* 讓圖片和介紹區塊有適當的間距 */
+    align-items: flex-start;
+    /* 將圖片和介紹對齊到頂部 */
+    font-size: 28px;
+    overflow: hidden; 
+}
+
+
+img {
+    border-radius: 50px;
+    /* 圓角圖片 */
+    width: 80%;
+    /* 使圖片寬度自適應 */
+    height: auto;
+    /* 高度自動調整以保持圖片比例 */
+}
+
+.two {
+    border-bottom: 5px solid #5e5e5e;
+    font-weight: bold;
+}
+
+.arcticons--idealo-shopping {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' d='M39.048 29.602H22.615c-.645 0-1.142-.57-1.054-1.21l2.481-18.048a.613.613 0 0 0-.607-.696h-3.5'/%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' d='M23.752 12.453h17.955c.47 0 .838.408.789.876l-1.002 9.55a2.024 2.024 0 0 1-2.012 1.812H22.07m-4.491-8.185H12.07m4.546 6.438H5.5'/%3E%3Cellipse cx='21.66' cy='35.526' fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' rx='3.086' ry='2.588' transform='rotate(-42.481 21.66 35.525)'/%3E%3Cellipse cx='36.295' cy='35.526' fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' rx='3.086' ry='2.588' transform='rotate(-42.481 36.295 35.526)'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+.introduce{
+    margin: 7%;
+    /* background: #dddddd;
+    border-radius: 50px;
+    box-sizing: border-box;
+    padding: 65px; */
+   
+}
+
+.recommend{
+    margin: 7%;
+}
+
+.flex{
+ margin:0 auto;
+ width:900px;
+ overflow:hidden; /* 當內容的<div>使用 Float 的時候 #WRAPPER 的高度會消失 */
+          /* 使用 overflow:hidden; 即可破解這個問題 */ 
+ background-color:#ffffff; padding-top:20px; padding-bottom:20px; 
+}
+
+.custom-quantity {
+    width: 120px;
+    height: 40px;
+    border: 2px solid #007bff;
+    padding: 5px;
+    font-size: 16px;
+    background-color: #f8f9fa;
+    text-align: center; /* 讓數字居中 */
+}
+/* 去除數字框的上下箭頭 */
+.custom-quantity::-webkit-outer-spin-button,
+.custom-quantity::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* 針對 Firefox 移除箭頭 */
+.custom-quantity[type="number"] {
+  -moz-appearance: textfield;
+}
+/* 自定義增減按鈕樣式 */
+.input-group .minus-btn,
+.input-group .plus-btn {
+  width: 60px;
+  height: 60px;
+  font-size: 40px;
+  background-color: #727272;
+  color: white;
+  border: 4px solid #393939;
+  padding: 5px; 
+  bottom: -11px;
+}
+.input-group .minus-btn{
+    position: relative;
+    left: 10px;
+}
+.input-group .plus-btn {
+    position: relative;
+    right: 10px;
+}
+.input-group .minus-btn:hover,
+.input-group .plus-btn:hover {
+  background-color: #1e4166;
+}
+.custom-quantity {
+    width: 60px;
+    height: 60px;
+    border: 4px solid #252525;
+    padding: 5px;
+    font-size: 30px;
+    background-color: #f8f9fa;
+    position: relative;
+    bottom: -5px;
+}
+
+.grid-3{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.g-3-1{
+    position: relative;
+    top: 65px;
+}
+.g-3-2{
+    position: relative;
+    top: 65px;
+    left: 100px;
+}
+
+
+
+.Productbox {
+    margin: 7%;
+    background: #dddddd;
+    /* 背景顏色 */
+    border: 2px solid transparent;
+    /* 邊框透明，保持形狀但不顯示顏色 */
+    border-radius: 50px;
+    /* 邊框圓角 */
+    box-sizing: border-box;
+    /* 確保背景顏色不會超出邊框 */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 1309px;
+}
+
+header {
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+    z-index: 1;
+
+    h1 {
+        font-style: italic;
+    }
+
+    .search {
+        flex: 1;
+        text-align: center;
+    }
+
+    .search-input {
+        border-radius: 21px;
+        /* 調整這個值來改變橢圓的形狀 */
+        padding: 2px 20px;
+        /* 調整內邊距來改變輸入框的高度和寬度 */
+        border: 1px solid #a93535;
+        /* 邊框顏色和樣式 */
+        outline: none;
+        /* 移除輸入框的默認外框 */
+        width: 500px;
+    }
+
+    button {
+        background-color: transparent;
+        /* 設置背景顏色為透明 */
+        border: none;
+        /* 移除邊框 */
+        cursor: pointer;
+        /* 設置鼠標樣式為指針 */
+        color: white;
+    }
+
+    .icon {
+        display: flex;
+        gap: 10px;
+        /* 在圖示之間添加空隙 */
+    }
+
+}
+
+.container {
+    /* display: grid; */
+    grid-template-columns: auto auto;
+    flex: 1;
+    z-index: -0;
+}
+
+aside {
+    grid-column: 1/2;
+    overflow-y: auto;
+    /* 使內容可滾動 */
+}
+
+article {
+    grid-column: 2/3;
+    overflow-y: auto;
+    /* 使內容可滾動 */
+}
+
+/* 側邊選單 */
+/* 主選單 */
+.sideMenu {
+    width: 250px;
+    height: auto;
+    min-height: 1309px;
+    background-color: #b1bed2;
+    border-right: 3px solid #d1d1d1;
+    display: flex;
+    /* 主軸 */
+    flex-direction: column;
+    box-shadow: 5px 0 5px rgba(23, 23, 54, 0.6);
+    position: absolute;
+    top: 59px;
+    bottom: 10px;
+    left: 0;
+    z-index: 0;
+
+    /* 將 sideMenu 左橫移 100%，使他到螢幕外 */
+    transform: translateX(-100%);
+    /* 側邊選單收合的時間差 */
+    transition: 0.5s;
+
+    p {
+        text-align: center;
+        display: flex;
+        padding: 10px 90px;
+        font-style: italic;
+    }
+
+    a,
+    label {
+        cursor: pointer;
+    }
+
+    label {
+        width: 20px;
+        height: 80px;
+        background-color: #b1bed2;
+        color: #477aa4;
+        /* 絕對定位在 sideMenu 上 */
+        position: absolute;
+        right: -20px;
+        top: 0;
+        margin: auto;
+        line-height: 80px;
+        text-align: center;
+        border-radius: 0 5px 5px 0;
+        box-shadow: 5px 0 5px rgba(23, 23, 54, 0.6);
+    }
+}
+
+#sideMenu-active:checked+.sideMenu {
+    transform: translateX(0);
+
+    /* 當我點擊 sideMenu 時，checkbox 會啟動 id，讓側邊選單跑出來 */
+    label .fas {
+        /* 使 label 裡的圖案橫向反轉 */
+        transform: scaleX(-1);
+    }
+}
+
+#sideMenu-active {
+    position: absolute;
+    /* 使 checkbox 變透明 */
+    opacity: 0;
+    /* 為了保險不要讓該功能還選得到，可將其排序往後跳 */
+    z-index: -1;
+}
+
+.side {
+    a {
+        text-decoration: none;
+        font-weight: 300;
+        display: block;
+        color: #151626;
+        padding: 20px 10px;
+        position: relative;
+
+        /* 將 border-top 新增到每個選單項目的底部 */
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+            right: 10px;
+            border-top: 1px dashed #ffffff;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* 選單項目的懸停狀態 */
+        &:hover::after {
+            transform: scaleX(1);
+        }
+
+        i {
+            margin-right: -1.1em;
+            transform: scale(0);
+            /* 使圖示消失 */
+            transition: 0.3s;
+        }
+
+        &:hover i {
+            /* 使文字回到原來的位置 */
+            margin-right: 0em;
+            /* 使圖示出現 */
+            transform: scale(1);
+        }
+
+        &+a::before {
+            content: "";
+            position: absolute;
+            left: 10px;
+            right: 10px;
+            top: 0px;
+        }
+    }
+}
+
+/* 子選單的樣式 */
+.submenu {
+    position: relative;
+}
+
+.submenu-items {
+    display: none;
+    padding-left: 20px;
+    background-color: #98a3b3;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    height: 0;
+    overflow: hidden;
+
+    a {
+        color: #f2e0dc;
+    }
+}
+
+.submenu.active .submenu-items {
+    display: block;
+    opacity: 1;
+    height: auto;
+}
+
+footer {
+    z-index: 2;
+    text-align: center;
+    font-size: 12px;
+    padding: 10px 0;
+    background-color: #182937;
+    margin: 0;
+}
+
+/*冷門&近距離首選*/
+/* 商品區域通用樣式 */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: white;
+}
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+
+}
+
+.card{
+    width: 250px;
+    background-color:#182937;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0,0,0,2);
+    margin: 20px;
+    float:left;
+
+}
+
+.card img{
+    border-radius: 0%;
+    width: 100%;
+    height: 200px; /* 統一圖片高度 */
+    object-fit: cover; /* 確保圖片裁切適當，維持比例 */
+
+}
+
+
+.card-content{
+    padding: 16px;
+
+}
+
+.card-content h3{
+    color: white;
+    font-size: 28px;
+    margin-bottom: 8px;
+
+}
+
+
+.card-content p{
+    color: white;
+    font-size: 15px;
+    line-height: 1.3;
+}
+
