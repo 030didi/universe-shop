@@ -151,23 +151,6 @@
         }
 
 
-        .image-overlay {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-
-        .image-overlay::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.813), rgba(0, 0, 0, 0.049)); /* 漸層效果 */
-            border-radius: 20px 0px 0px 0px; /* 和圖片邊框一致 */
-        }
-
         a{
             text-decoration: none; 
         }
@@ -308,7 +291,7 @@
                         <p style="font-size: 65px;margin: 7% 8% 0% 8%;font-weight: bold;color: #ffffff;">近距離首選</p>
                         <div class="wrapperhappy">
                         
-                            <div class="merged-column image-container image-overlay">
+                            <div class="merged-column image-container">
                                 <!-- 火星 -->
                                 <a href="../page/Mercury.html">
                                     <img src="../assets/image/mars.jpg" alt="火星" style="border-radius: 20px 0px 0px 0px;">
