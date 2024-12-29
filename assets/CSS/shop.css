@@ -13,7 +13,7 @@ body {
 
 header {
     color: white;
-    background-color: black;
+    background-color:#1c2734;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -240,13 +240,101 @@ footer {
     text-align: center;
     font-size: 12px;
     padding: 10px 0;
-    background-color: #182937;
+    background-color: #1c2734
     margin: 0;
 }
 
 
 
 /*購物車*/
+/*購物車內部*/
+/*垃圾桶按鈕*/
+.lineicons--trash-can {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23000' d='M48.9 8.8h-7.7V7.1c0-3-2.4-5.4-5.4-5.4h-7.7c-3 0-5.4 2.4-5.4 5.4v1.7H15c-2.9 0-5.3 2.4-5.3 5.3v3c0 2.2 1.3 4 3.2 4.8l1.6 34.6c.2 3.3 2.8 5.8 6.1 5.8h22.5c3.3 0 6-2.6 6.1-5.8L51 21.8c1.9-.8 3.2-2.7 3.2-4.8v-3c0-2.8-2.4-5.2-5.3-5.2M27.3 7.1c0-.5.4-.9.9-.9h7.7c.5 0 .9.4.9.9v1.7h-9.4V7.1zm-13 7c0-.4.3-.8.8-.8h33.8c.4 0 .8.3.8.8v3c0 .4-.3.8-.8.8H15.1c-.4 0-.8-.3-.8-.8zm28.9 43.7H20.8c-.9 0-1.6-.7-1.6-1.5l-1.6-33.9h28.9l-1.6 33.9c-.1.8-.8 1.5-1.7 1.5'/%3E%3Cpath fill='%23000' d='M32 32.4c-1.2 0-2.3 1-2.3 2.3v12.7c0 1.2 1 2.3 2.3 2.3c1.2 0 2.3-1 2.3-2.3V34.7c0-1.3-1.1-2.3-2.3-2.3m8 2c-1.3-.1-2.3.8-2.4 2.1l-.6 8.8c-.1 1.2.8 2.3 2.1 2.4h.2c1.2 0 2.2-.9 2.2-2.1l.6-8.8c0-1.3-.9-2.3-2.1-2.4m-16.1 0c-1.2.1-2.2 1.2-2.1 2.4l.7 8.8c.1 1.2 1.1 2.1 2.2 2.1h.2c1.2-.1 2.2-1.2 2.1-2.4l-.7-8.8c0-1.3-1.1-2.2-2.4-2.1'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    background-color:#1c2734;
+  }
+.card-shop {
+    margin-top: 20px;   
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;  /* 確保內容從上到下排列 */
+    align-items: flex-start;      /* 使內容靠左對齊 */
+    width: 600px;
+    padding: 50px;
+    background-color: #adbacf;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.productimage {
+    height: 100px;
+    width: auto;
+    margin-right: 20px; /* 如果需要圖片和其他內容之間有間距 */
+    align-self: flex-start; /* 確保圖片靠左 */
+}
+
+
+
+   
+
+  /* 外層卡片置中 */
+  .cardbuyer {
+    margin-top: 20px;   /* 設定與上方元素的間距 */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    padding: 50px;
+    background-color: #adbacf;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  }
+
+.card-body{} 
+
+
+  /* 輸入框樣式 */
+  input[type="text"] {
+    width:100%;
+    height: 30px;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  /* 文字 */
+p{
+    color: white;
+}
+h3{
+    color: white;
+}
+.orderalert {
+   
+    font-weight: bold;
+    color: red;
+    text-align: left;
+    margin-bottom: 40px;  /* 調整距離底部的間距 */
+    width: 100%;       /* 使其寬度與父容器相同，對齊左側 */
+    padding-left: 10px; /* 如果需要加點內邊距來讓文字不緊貼左邊 */
+}
+
+
+
 /*結帳按鈕*/
 .getshop{
     border:0;
@@ -263,8 +351,88 @@ footer {
     border:2px #374f6c solid;
   }
 
-  
+  /*購物車內商品*/
 
 
+.cart-item {
+    display: flex;
+    justify-content: space-between; /* 這裡使用 space-between 將內容分開 */
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #8997b1;
+    border-radius: 8px;
+}
+
+.product-image {
+    height: 80px;
+    width: 80px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-right: 20px; /* 添加右邊的邊距，防止商品名稱跟刪除按鈕太靠近 */
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+}
+
+.controls button {
+    background-color: #495570;
+    border: none;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background-color: #3b4563;
+}
+
+.quantity {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.price {
+    margin-top: 10px;
+}
+
+.delete {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.delete:hover {
+    background-color: #c9302c;
+}
+
+.total {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: right;
+}
+
+.card-footer {
+    color: #a93535;
+    font-weight: bolder;
+        text-align: right !important;
+}
 
 
