@@ -344,4 +344,15 @@ footer {
     padding: 10px 0;
     background-color: #182937;
     margin: 0;
+
+    a {
+        text-decoration: none;
+        /* 去掉底線 */
+        color: inherit;
+        /* 使顏色繼承自父元素，避免變色 */
+    }
+
+    a:hover {
+        color: white;
+    }
 }
