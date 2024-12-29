@@ -14,7 +14,7 @@ body {
 
 header {
     color: white;
-    background-color: black;
+    background-color: #1c2734;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -376,6 +376,7 @@ footer {
     font-size: 12px;
     padding: 10px 0;
     background-color: #182937;
+    color: white;
     margin: 0;
 
     a {
@@ -386,6 +387,6 @@ footer {
     }
 
     a:hover {
-        color: white;
+        color: #425a76;
     }
 }

@@ -13,13 +13,26 @@ body {
 
 header {
     color: white;
-    background-color:#1c2734;
+    background-color: #1c2734;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 10px 10px;
     z-index: 1;
+
+    a {
+        text-decoration: none;
+        /* 去掉底線 */
+        color: inherit;
+        /* 使顏色繼承自父元素，避免變色 */
+    }
+
+    a:hover {
+        color: inherit;
+        /* 在懸停時也不改變顏色 */
+    }
+
 
     h1 {
         font-style: italic;
@@ -66,15 +79,17 @@ header {
     flex: 1;
 }
 
-.box{
-    display: grid;/*排版分支*/
+.box {
+    display: grid;
+    /*排版分支*/
     grid-template-rows: auto auto;
 }
 
-.LAN{
+.LAN {
     grid-row: 1/2;
 }
-.cold{
+
+.cold {
     grid-row: 2/3;
 }
 
@@ -240,10 +255,21 @@ footer {
     text-align: center;
     font-size: 12px;
     padding: 10px 0;
-    background-color: #1c2734
+    background-color: #182937;
+    color: white;
     margin: 0;
-}
 
+    a {
+        text-decoration: none;
+        /* 去掉底線 */
+        color: inherit;
+        /* 使顏色繼承自父元素，避免變色 */
+    }
+
+    a:hover {
+        color: #425a76;
+    }
+}
 
 
 /*購物車*/
@@ -261,14 +287,17 @@ footer {
     mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
-    background-color:#1c2734;
-  }
+    background-color: #1c2734;
+}
+
 .card-shop {
-    margin-top: 20px;   
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;  /* 確保內容從上到下排列 */
-    align-items: flex-start;      /* 使內容靠左對齊 */
+    justify-content: flex-start;
+    /* 確保內容從上到下排列 */
+    align-items: flex-start;
+    /* 使內容靠左對齊 */
     width: 600px;
     padding: 50px;
     background-color: #adbacf;
@@ -279,17 +308,20 @@ footer {
 .productimage {
     height: 100px;
     width: auto;
-    margin-right: 20px; /* 如果需要圖片和其他內容之間有間距 */
-    align-self: flex-start; /* 確保圖片靠左 */
+    margin-right: 20px;
+    /* 如果需要圖片和其他內容之間有間距 */
+    align-self: flex-start;
+    /* 確保圖片靠左 */
 }
 
 
 
-   
 
-  /* 外層卡片置中 */
-  .cardbuyer {
-    margin-top: 20px;   /* 設定與上方元素的間距 */
+
+/* 外層卡片置中 */
+.cardbuyer {
+    margin-top: 20px;
+    /* 設定與上方元素的間距 */
     color: white;
     display: flex;
     flex-direction: column;
@@ -301,62 +333,70 @@ footer {
     border-radius: 50px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-  }
+}
 
-.card-body{} 
+.card-body {}
 
 
-  /* 輸入框樣式 */
-  input[type="text"] {
-    width:100%;
+/* 輸入框樣式 */
+input[type="text"] {
+    width: 100%;
     height: 30px;
     padding: 10px;
     margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-  }
-  /* 文字 */
-p{
+}
+
+/* 文字 */
+p {
     color: white;
 }
-h3{
+
+h3 {
     color: white;
 }
+
 .orderalert {
-   
+
     font-weight: bold;
     color: red;
     text-align: left;
-    margin-bottom: 40px;  /* 調整距離底部的間距 */
-    width: 100%;       /* 使其寬度與父容器相同，對齊左側 */
-    padding-left: 10px; /* 如果需要加點內邊距來讓文字不緊貼左邊 */
+    margin-bottom: 40px;
+    /* 調整距離底部的間距 */
+    width: 100%;
+    /* 使其寬度與父容器相同，對齊左側 */
+    padding-left: 10px;
+    /* 如果需要加點內邊距來讓文字不緊貼左邊 */
 }
 
 
 
 /*結帳按鈕*/
-.getshop{
-    border:0;
-    background-color:#374f6c;
-    color:#fff;
-    border-radius:10px;
-    cursor:pointer;
+.getshop {
+    border: 0;
+    background-color: #374f6c;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
     font-size: 18px;
-    padding: 10px 20px; }
-  
-  .getshop:hover{
-    color:#374f6c;
-    background-color:#fff;
-    border:2px #374f6c solid;
-  }
+    padding: 10px 20px;
+}
 
-  /*購物車內商品*/
+.getshop:hover {
+    color: #374f6c;
+    background-color: #fff;
+    border: 2px #374f6c solid;
+}
+
+/*購物車內商品*/
 
 
 .cart-item {
     display: flex;
-    justify-content: space-between; /* 這裡使用 space-between 將內容分開 */
+    justify-content: space-between;
+    /* 這裡使用 space-between 將內容分開 */
     align-items: center;
     margin-bottom: 20px;
     padding: 10px;
@@ -376,7 +416,8 @@ h3{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    margin-right: 20px; /* 添加右邊的邊距，防止商品名稱跟刪除按鈕太靠近 */
+    margin-right: 20px;
+    /* 添加右邊的邊距，防止商品名稱跟刪除按鈕太靠近 */
 }
 
 .controls {
@@ -432,7 +473,5 @@ h3{
 .card-footer {
     color: #a93535;
     font-weight: bolder;
-        text-align: right !important;
+    text-align: right !important;
 }
-
-
