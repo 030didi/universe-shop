@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log in</title>
+    <title>kosmos</title>
     <style>
-        @import url(../assets/CSS/login.css);
+        @import url(../assets/CSS/about.css);
     </style>
     <script src="https://code.iconify.design/iconify-icon/2.2.0/iconify-icon.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- 引入 jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../assets/JS/login.js"></script>
+    <script src="../assets/JS/about.js"></script>
 </head>
 
 <body>
@@ -47,76 +47,59 @@
 
     <div class="container">
         <article>
-            <section class="data">
-                <div class="form-container">
-                    <div class="form-switch">
-                        <button id="loginSwitch" class="active">登入</button>
-                        <button id="registerSwitch">註冊</button>
-                    </div>
-
-                    <div id="formContent">
-                        <div id="loginForm" class="form active">
-                            <h2>登入</h2>
-                            <hr>
-                            <form>
-                                <div class="form-group">
-                                    <label for="loginEmail">電子郵件</label>
-                                    <input type="email" id="loginEmail" placeholder="請輸入電子郵件" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="loginPassword">密碼</label>
-                                    <input type="password" id="loginPassword" placeholder="請輸入密碼" required>
-                                </div>
-                                <button onclick="javascript:location.href='../page/member.html'"
-                                    type="submit">登入</button>
-                            </form>
+            <section>
+                <div class="box">
+                    <div class="circle x3"></div>
+                    <div class="lan">
+                        <div class="circle-img">
+                            <img src="../assets/image/lan.jpg">
                         </div>
-
-                        <div id="registerForm" class="form">
-                            <h2>註冊</h2>
-                            <hr>
-                            <form>
-                                <div class="form-group">
-                                    <label for="registerName">姓名</label>
-                                    <input type="text" id="registerName" placeholder="請輸入姓名" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="registerEmail">電子郵件</label>
-                                    <input type="email" id="registerEmail" placeholder="請輸入電子郵件" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="registerPassword">密碼</label>
-                                    <input type="password" id="registerPassword" placeholder="請輸入密碼" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="registerConfirmPassword">確認密碼</label>
-                                    <input type="password" id="registerConfirmPassword" placeholder="請再次輸入密碼" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="registerPhone">手機</label>
-                                    <input type="text" id="registerPhone" placeholder="請輸入手機號碼" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="registerID">身分證</label>
-                                    <input type="text" id="registerID" placeholder="請輸入身分證字號/ID" required>
-                                </div>
-                                <div class="check"><input type="checkbox">我願意接受Kosmos的各種好禮資訊與剝削</div>
-
-                                <button onclick="javascript:location.href='../page/member.html'"
-                                    type="submit">註冊</button>
-                            </form>
+                    </div>
+                    <div class="kai">
+                        <div class="circle-img">
+                            <img src="../assets/image/kai.jpg">
+                        </div>
+                    </div>
+                    <div class="lu">
+                        <div class="circle-img">
+                            <img src="../assets/image/lu.jpg">
                         </div>
                     </div>
                 </div>
             </section>
-
+            <section class="about">
+                <div class="top">
+                    <h2>關於我們</h2>
+                </div>
+                <div class="background">
+                    <div class="about-top">
+                        <iconify-icon icon="uil:book-open" width="24" height="24" style="color: #fff"></iconify-icon>
+                        <h3>關於KOSMOS</h3>
+                    </div>
+                    <div class="content">
+                        KOSMOS ，希臘文中的宇宙。意味著只要你想(錢錢夠多)，就可以擁有宇宙。
+                        <br>
+                        人們都說要摘星星給珍貴的人，但常常摘不下來(太高了勾不到)
+                        <br>
+                        我們創立KOSMOS就是為了實現這個聽起來遙不可及的夢想(雖然好像也沒有成真)
+                        <br>
+                        但創立這個網站也像是實現大家曾有的夢想
+                        擁有星球契約也像是跟曾經的夢想拉手跳舞
+                        <br>
+                        <br>
+                        在KOSMOS這裡，我們架空了一個真的可以買到星球的平行世界。
+                        大家都成為了家裡有礦的神奇寶貝大師，不用在乎光年遠近，看著觸手可及的星球地契(?)就能夠自由的瀏覽著世界中各式星系，像是戴著竹蜻蜓遨遊在宇宙中。
+                        <br>
+                        <br>
+                        歡迎各位給我們億星好評！一起遨遊宇宙買買買！
+                    </div>
+                </div>
+            </section>
         </article>
-
         <aside>
             <!-- 側邊選單 -->
             <!-- 菜單欄 -->
             <!-- 使用 checkbox 來做開關 -->
-
             <input type="checkbox" name="" id="sideMenu-active">
             <div class="sideMenu">
                 <p>KOSMOS</p>
@@ -174,6 +157,8 @@
 
         </aside>
     </div>
+
+
 
     <footer style="margin-top: 0;">
         聯絡我們：a12345678@gmail.com

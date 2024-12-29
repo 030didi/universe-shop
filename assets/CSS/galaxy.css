@@ -1,16 +1,33 @@
 header {
     color: white;
-    background-color: black;
+    background-color: #1c2734;
+    display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+    z-index: 1;
+
+    a {
+        text-decoration: none;
+        /* 去掉底線 */
+        color: inherit;
+        /* 使顏色繼承自父元素，避免變色 */
+    }
+
+    a:hover {
+        color: inherit;
+        /* 在懸停時也不改變顏色 */
+    }
 }
 
 
 /* article {
     flex: 1; */
-    /* 讓 <article> 占據剩餘的空間 */
-    /* padding: 20px;
+/* 讓 <article> 占據剩餘的空間 */
+/* padding: 20px;
     /* background-color: #dde4ee; 增加背景色來區分 */
-/* } */ 
+/* } */
 
 .Productbox {
     margin: 7%;
@@ -256,23 +273,36 @@ footer {
     font-size: 12px;
     padding: 10px 0;
     background-color: #182937;
+    color: white;
     margin: 0;
+
+    a {
+        text-decoration: none;
+        /* 去掉底線 */
+        color: inherit;
+        /* 使顏色繼承自父元素，避免變色 */
+    }
+
+    a:hover {
+        color: inherit;
+        /* 在懸停時也不改變顏色 */
+    }
 }
 
 /*冷門&近距離首選*/
 /* 商品區域通用樣式 */
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: sans-serif;
 }
 
-body{
+body {
     background-color: white;
 }
 
-.card-container{
+.card-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -280,31 +310,33 @@ body{
 
 }
 
-.card{
+.card {
     width: 270px;
-    background-color:#182937;
+    background-color: #182937;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0px 2px 4px rgba(0,0,0,2);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 2);
     margin: 20px;
-    float:left;
+    float: left;
 
 }
 
-.card img{
+.card img {
     width: 100%;
-    height: 200px; /* 統一圖片高度 */
-    object-fit: cover; /* 確保圖片裁切適當，維持比例 */
+    height: 200px;
+    /* 統一圖片高度 */
+    object-fit: cover;
+    /* 確保圖片裁切適當，維持比例 */
 
 }
 
 
-.card-content{
+.card-content {
     padding: 16px;
 
 }
 
-.card-content h3{
+.card-content h3 {
     color: white;
     font-size: 28px;
     margin-bottom: 8px;
@@ -312,9 +344,8 @@ body{
 }
 
 
-.card-content p{
+.card-content p {
     color: white;
     font-size: 15px;
     line-height: 1.3;
 }
-

@@ -1,7 +1,24 @@
 header {
     color: white;
-    background-color: black;
+    background-color: #1c2734;
+    display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+    z-index: 1;
+
+    a {
+        text-decoration: none;
+        /* 去掉底線 */
+        color: inherit;
+        /* 使顏色繼承自父元素，避免變色 */
+    }
+
+    a:hover {
+        color: inherit;
+        /* 在懸停時也不改變顏色 */
+    }
 }
 
 
@@ -33,7 +50,7 @@ header {
     align-items: flex-start;
     /* 將圖片和介紹對齊到頂部 */
     font-size: 28px;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 
@@ -65,25 +82,28 @@ img {
     mask-size: 100% 100%;
 }
 
-.introduce{
+.introduce {
     margin: 7%;
     /* background: #dddddd;
     border-radius: 50px;
     box-sizing: border-box;
     padding: 65px; */
-   
+
 }
 
-.recommend{
+.recommend {
     margin: 7%;
 }
 
-.flex{
- margin:0 auto;
- width:900px;
- overflow:hidden; /* 當內容的<div>使用 Float 的時候 #WRAPPER 的高度會消失 */
-          /* 使用 overflow:hidden; 即可破解這個問題 */ 
- background-color:#ffffff; padding-top:20px; padding-bottom:20px; 
+.flex {
+    margin: 0 auto;
+    width: 900px;
+    overflow: hidden;
+    /* 當內容的<div>使用 Float 的時候 #WRAPPER 的高度會消失 */
+    /* 使用 overflow:hidden; 即可破解這個問題 */
+    background-color: #ffffff;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .custom-quantity {
@@ -93,43 +113,50 @@ img {
     padding: 5px;
     font-size: 16px;
     background-color: #f8f9fa;
-    text-align: center; /* 讓數字居中 */
+    text-align: center;
+    /* 讓數字居中 */
 }
+
 /* 去除數字框的上下箭頭 */
 .custom-quantity::-webkit-outer-spin-button,
 .custom-quantity::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* 針對 Firefox 移除箭頭 */
 .custom-quantity[type="number"] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
+
 /* 自定義增減按鈕樣式 */
 .input-group .minus-btn,
 .input-group .plus-btn {
-  width: 60px;
-  height: 60px;
-  font-size: 40px;
-  background-color: #727272;
-  color: white;
-  border: 4px solid #393939;
-  padding: 5px; 
-  bottom: -11px;
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+    background-color: #727272;
+    color: white;
+    border: 4px solid #393939;
+    padding: 5px;
+    bottom: -11px;
 }
-.input-group .minus-btn{
+
+.input-group .minus-btn {
     position: relative;
     left: 10px;
 }
+
 .input-group .plus-btn {
     position: relative;
     right: 10px;
 }
+
 .input-group .minus-btn:hover,
 .input-group .plus-btn:hover {
-  background-color: #1e4166;
+    background-color: #1e4166;
 }
+
 .custom-quantity {
     width: 60px;
     height: 60px;
@@ -141,15 +168,17 @@ img {
     bottom: -5px;
 }
 
-.grid-3{
+.grid-3 {
     display: flex;
     flex-wrap: nowrap;
 }
-.g-3-1{
+
+.g-3-1 {
     position: relative;
     top: 65px;
 }
-.g-3-2{
+
+.g-3-2 {
     position: relative;
     top: 65px;
     left: 100px;
@@ -401,23 +430,35 @@ footer {
     font-size: 12px;
     padding: 10px 0;
     background-color: #182937;
+    color: white;
     margin: 0;
+
+    a {
+        text-decoration: none;
+        /* 去掉底線 */
+        color: inherit;
+        /* 使顏色繼承自父元素，避免變色 */
+    }
+
+    a:hover {
+        color: #425a76;
+    }
 }
 
 /*冷門&近距離首選*/
 /* 商品區域通用樣式 */
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: sans-serif;
 }
 
-body{
+body {
     background-color: white;
 }
 
-.card-container{
+.card-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -425,32 +466,34 @@ body{
 
 }
 
-.card{
+.card {
     width: 250px;
-    background-color:#182937;
+    background-color: #182937;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0px 2px 4px rgba(0,0,0,2);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 2);
     margin: 20px;
-    float:left;
+    float: left;
 
 }
 
-.card img{
+.card img {
     border-radius: 0%;
     width: 100%;
-    height: 200px; /* 統一圖片高度 */
-    object-fit: cover; /* 確保圖片裁切適當，維持比例 */
+    height: 200px;
+    /* 統一圖片高度 */
+    object-fit: cover;
+    /* 確保圖片裁切適當，維持比例 */
 
 }
 
 
-.card-content{
+.card-content {
     padding: 16px;
 
 }
 
-.card-content h3{
+.card-content h3 {
     color: white;
     font-size: 28px;
     margin-bottom: 8px;
@@ -458,9 +501,8 @@ body{
 }
 
 
-.card-content p{
+.card-content p {
     color: white;
     font-size: 15px;
     line-height: 1.3;
 }
-

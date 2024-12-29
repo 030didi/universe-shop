@@ -17,12 +17,38 @@
 
     <style>
         body {
-        background-image: linear-gradient(rgba(36, 36, 36, 0.858), rgba(0, 0, 0, 0.812)),  url('../assets/image/仙女星系.jpg'); /* 替換成你的圖片路徑 */
-        background-size: cover; /* 讓圖片自動覆蓋整個背景 */
-        background-position: center center; /* 背景圖片置中 */
-        background-attachment: fixed; /* 使背景固定，當滾動時圖片不會移動 */
+            background-image: linear-gradient(rgba(36, 36, 36, 0.858), rgba(0, 0, 0, 0.812)), url('../assets/image/仙女星系.jpg');
+            /* 替換成你的圖片路徑 */
+            background-size: cover;
+            /* 讓圖片自動覆蓋整個背景 */
+            background-position: center center;
+            /* 背景圖片置中 */
+            background-attachment: fixed;
+            /* 使背景固定，當滾動時圖片不會移動 */
         }
 
+        header {
+            color: white;
+            background-color: #1c2734;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 10px;
+            z-index: 1;
+
+            a {
+                text-decoration: none;
+                /* 去掉底線 */
+                color: inherit;
+                /* 使顏色繼承自父元素，避免變色 */
+            }
+
+            a:hover {
+                color: inherit;
+                /* 在懸停時也不改變顏色 */
+            }
+        }
 
         .arcticons--idealo-shopping {
             display: inline-block;
@@ -42,17 +68,19 @@
             font-size: 100px;
             position: relative;
             text-align: center;
-            margin: 7% auto; /* 使元素水平居中 */
+            margin: 7% auto;
+            /* 使元素水平居中 */
             margin-top: 50px;
-            width: 80%; /* 确保元素有一个宽度 */
+            width: 80%;
+            /* 确保元素有一个宽度 */
             margin-bottom: 20px;
         }
 
-        .recommend{
+        .recommend {
             margin: 0% 8% 8%;
         }
 
-        .buyit{
+        .buyit {
             margin: 0% 10% 0% 10%;
             padding: 50px;
             background-color: #141414;
@@ -70,34 +98,40 @@
             border-radius: 20px;
             text-align: center;
             display: grid;
-            grid-template-columns: 1fr 3fr; /* 创建两个等宽的列 */
+            grid-template-columns: 1fr 3fr;
+            /* 创建两个等宽的列 */
         }
 
         .star {
-            color:  gold;
+            color: gold;
             font-size: 50px;
         }
+
         .NOstar {
-            color:  rgb(102, 102, 102);
+            color: rgb(102, 102, 102);
             font-size: 50px;
         }
-        .where-1{
+
+        .where-1 {
             position: relative;
             bottom: 20px;
             margin: -28px;
             right: 25px;
         }
-        .where-2{
+
+        .where-2 {
             position: relative;
             margin: -5px;
             right: 90px;
         }
-        .where-3{
+
+        .where-3 {
             position: relative;
             top: -10px;
             margin: 0px;
         }
-        .where-4{
+
+        .where-4 {
             position: relative;
             top: 10px;
         }
@@ -113,37 +147,40 @@
         }
 
         .merged-column {
-            grid-column: 1 / 3; /* 從第 1 列跨越到第 3 列（不包括 3） */
+            grid-column: 1 / 3;
+            /* 從第 1 列跨越到第 3 列（不包括 3） */
             grid-row: 1 / 3;
         }
 
-        .c{
-            grid-column:1 / 2;
+        .c {
+            grid-column: 1 / 2;
             grid-row: 3 / 4;
         }
 
-        .b{
+        .b {
             grid-column: 2 / 3;
             grid-row: 3 / 4;
         }
 
-        .h{
+        .h {
             grid-column: 3 / 5;
             grid-row: 2 / 4;
         }
 
-        .img-1{
-            width: 80%;   /* 使用寬度來控制圖片縮放 */
-            height: auto; /* 自動調整高度以保持等比縮放 */
+        .img-1 {
+            width: 80%;
+            /* 使用寬度來控制圖片縮放 */
+            height: auto;
+            /* 自動調整高度以保持等比縮放 */
         }
 
-        .size-2{
+        .size-2 {
             width: 350px;
             height: 350px;
             border-radius: 0px 20px 0px 0px;
         }
 
-        
+
         .image-container img {
             width: 100%;  /* 使圖片的寬度等於容器寬度 */
             height: 100%; /* 使圖片的高度等於容器高度 */
@@ -154,16 +191,17 @@
         a{
             text-decoration: none; 
         }
-
     </style>
-    
+
 </head>
 
 <body>
     <header id="header">
         <!-- header 中內容 -->
 
-        <h1>KOSMOS</h1>
+        <a href="../page/index.html">
+            <h1>KOSMOS</h1>
+        </a>
 
         <div class="search">
             <form>
@@ -187,17 +225,17 @@
     </header>
 
     <div class="container">
-<!-- 商品 -->
+        <!-- 商品 -->
         <article>
             <div class="content-container">
                 <div class="wrapper">
-        
-        
-        
+
+
+
                     <!-- <aside></aside> -->
                     <!-- 內文 -->
                     <div class="c">
-                            <!-- 商品頁面 -->
+                        <!-- 商品頁面 -->
                         <article class="galaxy">
                             <div style="border-bottom: 2px solid #ffffff;
                             font-weight: bold;
@@ -209,11 +247,11 @@
                             color: #ffffff;">仙女星系</div>
 
                         </article>
-        
+
                         <article>
                             <!-- 商品頁面 -->
-                          <div class="buyit">
-                            如果你正在尋找一個充滿新奇與未知的家，那麼我們的仙女星系將是你理想的選擇！這個星系如同一片遼闊而神秘的天地，為你帶來無窮的探索機會和冒險樂趣。星女系擁有獨特的星球和豐富的自然景觀，保證讓你驚奇不斷！<br>
+                            <div class="buyit">
+                                如果你正在尋找一個充滿新奇與未知的家，那麼我們的仙女星系將是你理想的選擇！這個星系如同一片遼闊而神秘的天地，為你帶來無窮的探索機會和冒險樂趣。星女系擁有獨特的星球和豐富的自然景觀，保證讓你驚奇不斷！<br>
 
                             <span style="color: #9c1f1f;font-size:50px;font-weight: bold;">為什麼選擇仙女星系？</span><br>
                             <span style="color: #ffffff;font-size: 30px;font-weight: bold;">1.未知的魅力，讓每一刻都值得期待</span>
@@ -346,15 +384,15 @@
             
         
                     </div>
-        
+
 
                 </div>
             </div>
-        
+
         </article>
 
 
-<!-- 側欄 -->
+        <!-- 側欄 -->
         <aside>
             <!-- 側邊選單 -->
             <!-- 菜單欄 -->
@@ -389,15 +427,13 @@
                             </i>仙女星系
                         </a>
                         <div class="submenu-items">
-                            <a href="#">橢圓星系M32</a>
-                            <a href="#">橢圓星系M110</a>
-                            <a href="#">矮橢球星系NGC 185</a>
+                            <a href="#">B612</a>
+                            <a href="#">M32</a>
+                            <a href="#">M110</a>
                         </div>
                     </div>
-                    <a href="#"><i class="fas"><iconify-icon icon="icon-park-outline:oval-love" width="24"
-                                height="24" /></i>收藏的愛妃</a>
-                    <a href="#"><i class="fas"><iconify-icon icon="carbon:star-review" width="24"
-                                height="24" /></i>星系評價</a>
+                    <a href="../page/AndromedaGalaxy.html"><i class="fas"><iconify-icon icon="carbon:star-review"
+                                width="24" height="24" /></i>星系評價</a>
                     <a href="#"><i class="fas"><iconify-icon icon="mdi:about-circle-outline" width="24"
                                 height="24" /></i>關於我們</a>
                 </span>
@@ -416,7 +452,7 @@
 
     <footer style="margin-top: 0;">
         聯絡我們：a12345678@gmail.com
-        關於我們
+        <a href="../page/about.html">關於我們</a>
     </footer>
 </body>
 
