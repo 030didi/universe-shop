@@ -16,6 +16,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../assets/JS/index.js"></script>
     <!-- 購物車js -->
+
     <script src="../assets/JS/shop.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
@@ -49,102 +50,182 @@
         </div>
     </header>
 
-    <div class="container">
-        <!-- 購物車 -->
-        <article>
-            <!-- 訂購人資訊 -->
-            <div class="card buyer">
-                <form method="post" action="">
-                    <div class="card-body">
-                        <h3>訂單資訊</h3>
-                        <!-- 訂購人基本資料 -->
-                        <p>姓名：</p><input type="text" name="name" /><br />
-                        <p>電話：</p><input type="text" name="phonenumber" /><br />
-                        <p>電子郵件：</p><input type="text" name="mail" /><br />
-                        <!-- 訂購人付款方式 -->
-                        <input type="radio" name="usetopay" value="VISA" checked />VISA
-                        <input type="radio" name="usetopay" value="cash" />現金交易
 
-                        <br><br>
-                        <p>訂單備註：</p><input type="text" name="note" /><br /><br />
+    <!-- 購物車 -->
+    <section class="cardbuyer">
+        <article>
+            <!-- 購物車內容物 -->
+
+            <div class="card-header">
+                <h2>訂單資訊</h2><br>
+            </div>
+
+            <div class="cart-item">
+                <img src="../assets/image/Neptune.jpg" alt="商品圖片" class="productimage">
+                <div class="details">
+                    <h3>Neptune</h3>
+                    <div class="controls">
+                        <button>-</button>
+                        <span class="quantity">1</span>
+                        <button>+</button>
                     </div>
-                    <p class="orderalert">! ! 注意事項： 星球契約將在您下定後以電子郵件寄送至您的信箱</p>
-                </form>
+                </div>
+                <!-- 金額 -->
+                <span class="price">NT$ 5000000</span>
+                <!-- 刪除按鈕 -->
+                <button class="delete">
+                    <span class="lineicons--trash-can"></span>
+            </div>
+
+            <!-- 商品二 -->
+
+            <div class="cart-item">
+                <img src="../assets/image/Venus.jpg" alt="商品圖片" class="productimage">
+                <div class="details">
+                    <h3>Venus</h3>
+                    <div class="controls">
+                        <button>-</button>
+                        <span class="quantity">1</span>
+                        <button>+</button>
+                    </div>
+                </div>
+                <span class="price">NT$ 1500000</span> <!-- 金額 -->
+                <!-- 刪除按鈕 -->
+                <button class="delete">
+                    <span class="lineicons--trash-can"></span>
             </div>
 
 
+            <!-- 商品三 -->
+            <div class="cart-item">
+                <img src="../assets/image/Uranus.jpg" alt="商品圖片" class="productimage">
+                <div class="details">
+                    <h3>Uranus</h3>
+                    <div class="controls">
+                        <button>-</button>
+                        <span class="quantity">1</span>
+                        <button>+</button>
+                    </div>
+                </div>
+                <span class="price">NT$ 2500000</span> <!-- 金額 -->
+                <!-- 刪除按鈕 -->
+                <button class="delete">
+                    <span class="lineicons--trash-can"></span>
+            </div>
 
 
-
-            <!-- 結帳按鈕區 -->
-            <section>
-                <!-- 我再想想按鈕 -->
-                <input type="button" class="getshop" value="我再想想">
-
-                <!-- 結帳按鈕彈跳視窗 -->
-                <input type="button" id="getshop" class="getshop" value="送出結帳">
-            </section>
-
+            <div class="card-footer">
+                合計金額：NT$ 9000000
+            </div>
         </article>
 
 
 
+    </section>
 
-        <aside>
-            <!-- 側邊選單 -->
-            <!-- 菜單欄 -->
-            <!-- 使用 checkbox 來做開關 -->
-            <input type="checkbox" name="" id="sideMenu-active">
-            <div class="sideMenu">
-                <p>KOSMOS</p>
-                <span class="side">
-                    <!-- 主選單1 -->
-                    <div class="submenu">
-                        <a href="#">
-                            <i class="fas">
-                                <iconify-icon icon="solar:planet-2-bold" width="24" height="24">
-                            </i>太陽系
-                        </a>
-                        <div class="submenu-items">
-                            <a href="#">水星</a>
-                            <a href="#">金星</a>
-                            <a href="#">火星</a>
-                            <a href="#">木星</a>
-                            <a href="#">土星</a>
-                            <a href="#">天王星</a>
-                            <a href="#">海王星</a>
-                            <a href="#">冥王星</a>
-                        </div>
-                    </div>
-                    <!-- 主選單2 -->
-                    <div class="submenu">
-                        <a href="#">
-                            <i class="fas">
-                                <iconify-icon icon="solar:planet-2-bold" width="24" height="24">
-                            </i>仙女星系
-                        </a>
-                        <div class="submenu-items">
-                            <a href="#">橢圓星系M32</a>
-                            <a href="#">橢圓星系M110</a>
-                            <a href="#">矮橢球星系NGC 185</a>
-                        </div>
-                    </div>
-                    <a href="#"><i class="fas"><iconify-icon icon="icon-park-outline:oval-love" width="24"
-                                height="24" /></i>收藏的愛妃</a>
-                    <a href="#"><i class="fas"><iconify-icon icon="carbon:star-review" width="24"
-                                height="24" /></i>星系評價</a>
-                    <a href="#"><i class="fas"><iconify-icon icon="mdi:about-circle-outline" width="24"
-                                height="24" /></i>關於我們</a>
-                </span>
-                <!-- 側欄箭頭按鈕 -->
-                <a href="#header">
-                    <label for="sideMenu-active">
-                        <i class="fas fa-angle-right"></i>
-                    </label>
-                </a>
-                <!-- label 寫在 nav 下方是為了比較好看到 -->
+
+
+
+
+
+
+
+    <!-- 訂購人資訊 -->
+    <section class="cardbuyer">
+
+        <form method="post" action="">
+            <div class="card-body">
+                <h2>訂購人資訊</h2>
+                <!-- 訂購人基本資料 -->
+                <p><label>姓名：</p><input type="text" name="name" /></p></label><br />
+                <p><label>電話：<input type="text" name="phonenumber" /></p></label><br />
+                <p><label>電子郵件：<input type="text" name="mail" /></p></label><br />
+                <!-- 訂購人付款方式 -->
+                <input type="radio" name="usetopay" value="VISA" />VISA
+                <input type="radio" name="usetopay" value="cash" />現金交易
+
+                <br><br>
+                <p>訂單備註：</p><input type="text" name="note" /><br /><br />
             </div>
-        </aside>
+            <div class="orderalert">!!注意事項： <br>星球契約將在您下定後以電子郵件寄送至您的信箱</div>
+        </form>
+
+        <!-- 結帳按鈕區 -->
+        <section>
+            <!-- 我再想想按鈕 -->
+            <input type="button" class="getshop" value="我再想想">
+
+            <!-- 結帳按鈕彈跳視窗 -->
+            <input type="button" id="getshop" class="getshop" value="送出結帳">
+        </section>
+
+
+    </section>
+
+
+
+
+
+
+    </article>
+
+
+
+
+    <aside>
+        <!-- 側邊選單 -->
+        <!-- 菜單欄 -->
+        <!-- 使用 checkbox 來做開關 -->
+        <input type="checkbox" name="" id="sideMenu-active">
+        <div class="sideMenu">
+            <p>KOSMOS</p>
+            <span class="side">
+                <!-- 主選單1 -->
+                <div class="submenu">
+                    <a href="#">
+                        <i class="fas">
+                            <iconify-icon icon="solar:planet-2-bold" width="24" height="24">
+                        </i>太陽系
+                    </a>
+                    <div class="submenu-items">
+                        <a href="#">水星</a>
+                        <a href="#">金星</a>
+                        <a href="#">火星</a>
+                        <a href="#">木星</a>
+                        <a href="#">土星</a>
+                        <a href="#">天王星</a>
+                        <a href="#">海王星</a>
+                        <a href="#">冥王星</a>
+                    </div>
+                </div>
+                <!-- 主選單2 -->
+                <div class="submenu">
+                    <a href="#">
+                        <i class="fas">
+                            <iconify-icon icon="solar:planet-2-bold" width="24" height="24">
+                        </i>仙女星系
+                    </a>
+                    <div class="submenu-items">
+                        <a href="#">橢圓星系M32</a>
+                        <a href="#">橢圓星系M110</a>
+                        <a href="#">矮橢球星系NGC 185</a>
+                    </div>
+                </div>
+                <a href="#"><i class="fas"><iconify-icon icon="icon-park-outline:oval-love" width="24"
+                            height="24" /></i>收藏的愛妃</a>
+                <a href="#"><i class="fas"><iconify-icon icon="carbon:star-review" width="24" height="24" /></i>星系評價</a>
+                <a href="#"><i class="fas"><iconify-icon icon="mdi:about-circle-outline" width="24"
+                            height="24" /></i>關於我們</a>
+            </span>
+            <!-- 側欄箭頭按鈕 -->
+            <a href="#header">
+                <label for="sideMenu-active">
+                    <i class="fas fa-angle-right"></i>
+                </label>
+            </a>
+            <!-- label 寫在 nav 下方是為了比較好看到 -->
+        </div>
+    </aside>
     </div>
 
 
