@@ -80,14 +80,10 @@ header {
 
 aside {
     grid-column: 1/2;
-    overflow-y: auto;
-    /* 使內容可滾動 */
 }
 
 article {
     grid-column: 2/3;
-    overflow-y: auto;
-    /* 使內容可滾動 */
 }
 
 section {

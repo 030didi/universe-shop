@@ -94,12 +94,10 @@ header {
 
 aside {
     grid-column: 1/2;
-    /* 使內容可滾動 */
 }
 
 article {
     grid-column: 2/3;
-    /* 使內容可滾動 */
 }
 
 /* 側邊選單 */
