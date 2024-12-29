@@ -8,8 +8,10 @@
 body {
     display: flex;
     flex-direction: column;
-    min-height: 1309px;
+    min-height: 100vh;
+    margin: 0;
 }
+
 
 header {
     color: white;
@@ -20,6 +22,11 @@ header {
     justify-content: space-between;
     padding: 10px 10px;
     z-index: 1;
+    position: fixed; /* 固定 header */
+    top: 0; /* 距離頁面頂部為 0 */
+    left: 0; /* 距離頁面左邊為 0 */
+    right: 0; /* 距離頁面右邊為 0 */
+    width: 100%; /* 讓 header 填滿整個寬度 */
 
     a {
         text-decoration: none;
@@ -313,11 +320,19 @@ footer {
 
 
 
-
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 垂直居中 */
+    align-items: center; /* 水平居中 */
+    min-height: calc(100vh - 120px); /* 確保頁面內容區域有足夠空間，扣掉 header 和 footer 高度 */
+    padding: 50px;
+}
 /* 外層卡片置中 */
 .cardbuyer {
-    margin-top: 20px;
-    /* 設定與上方元素的間距 */
+     /* 設定與上方元素的間距 */
+    margin-top: 30px;
+   
     color: white;
     display: flex;
     flex-direction: column;
@@ -330,8 +345,6 @@ footer {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
 }
-
-.card-body {}
 
 
 /* 輸入框樣式 */
