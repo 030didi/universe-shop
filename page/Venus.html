@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- 金星 -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,9 +21,7 @@
     <header id="header">
         <!-- header 中內容 -->
 
-        <a href="../page/index.html">
-            <h1>KOSMOS</h1>
-        </a>
+        <h1>KOSMOS</h1>
 
         <div class="search">
             <form>
@@ -47,13 +45,13 @@
     </header>
 
     <div class="container">
-        <!-- 商品 -->
+<!-- 商品 -->
         <article>
             <div class="content-container">
                 <div class="wrapper">
-
-
-
+        
+        
+        
                     <!-- <aside></aside> -->
                     <!-- 內文 -->
                     <div class="c">
@@ -61,21 +59,18 @@
                             <!-- 商品頁面 -->
                             <article>
                                 <div class="grid-1">
-                                    <img src="../assets/image/Mercury商品.jpg" alt="水星">
-
+                                    <div class="cup">
+                                    <img src="../assets/image/Venus商品.jpg" alt="金星">
+                                    </div>
                                     <div class="grid-2">
                                         <div class="two">&nbsp;&nbsp;
-                                            <a href="../page/index.html" class="color"
-                                                style="color: #5e5e5e;">首頁</a><span style="color: #5e5e5e;">/</span>
-                                            <a href="../page/solarsystem.html" class="color"
-                                                style="color: #5e5e5e;">太陽系</a><br>
-                                            <span style="font-size: 85px;">Mercury</span>
+                                            <a href="../page/index.html" class="color" style="color: #5e5e5e;">首頁</a><span style="color: #5e5e5e;">/</span>
+                                            <a href="../page/solarsystem.html" class="color" style="color: #5e5e5e;">太陽系</a><br>
+                                            <span style="font-size: 85px;">Venus</span>
                                         </div>
-                                        <div class="buy"><span style="font-size: 40px;">NT$10000000</span><br>
-                                            <span
-                                                style="font-size: 20px;background-color: #5e5e5e;border-radius: 20px;padding: 4px;color: aliceblue;">商品規格:<br></span>
-                                            限量太陽系行星<br><span
-                                                style="font-size: 18px;font-weight: bold;color: #5e5e5e;">水星款</span>
+                                        <div class="buy"><span style="font-size: 40px;">NT$19000000</span><br>
+                                            <span style="font-size: 20px;background-color: #5e5e5e;border-radius: 20px;padding: 4px;color: aliceblue;">商品規格:<br></span>
+                                            限量太陽系行星<br><span style="font-size: 18px;font-weight: bold;color: #5e5e5e;">金星款</span>
                                             <div id="rating">
                                                 <span class="star" data-value="1">&#9733;</span>
                                                 <span class="star" data-value="2">&#9733;</span>
@@ -83,15 +78,15 @@
                                                 <span class="star" data-value="4">&#9733;</span>
                                                 <span class="star" data-value="5">&#9733;</span>
                                             </div>
-
+        
                                             <script>
                                                 const stars = document.querySelectorAll('.star');
-
+        
                                                 stars.forEach(star => {
                                                     star.addEventListener('click', () => {
                                                         // 清除所有星星的 selected 類
                                                         stars.forEach(s => s.classList.remove('selected'));
-
+        
                                                         // 找到點擊的星星的 data-value，並將其左邊的所有星星標記為 selected
                                                         const rating = star.getAttribute('data-value');
                                                         stars.forEach(s => {
@@ -99,7 +94,7 @@
                                                                 s.classList.add('selected');
                                                             }
                                                         });
-
+        
                                                         console.log(`Rated: ${rating} stars`);
                                                     });
                                                 });
@@ -109,46 +104,40 @@
                                         <div class="grid-3">
                                             <!-- 數量選擇器 -->
                                             <div class="g-3-1">
-                                                <label for="quantity">
-                                                    <div class="input-group">
-                                                        <button class="btn btn-secondary minus-btn"
-                                                            type="button">-</button>
-                                                        <input type="number" id="quantity"
-                                                            class="form-control custom-quantity" value="1" min="1">
-                                                        <button class="btn btn-secondary plus-btn"
-                                                            type="button">+</button>
-                                                    </div>
-                                                </label>
+                                            <label for="quantity">
+                                            <div class="input-group">
+                                                <button class="btn btn-secondary minus-btn" type="button">-</button>
+                                                <input type="number" id="quantity" class="form-control custom-quantity" value="1" min="1">
+                                                <button class="btn btn-secondary plus-btn" type="button">+</button>
+                                            </div>
+                                            </label>
                                             </div>
 
                                             <!-- 加入購物車按鈕 -->
                                             <div class="g-3-2">
-                                                <a href="#" data-name="Mercury" data-price="10000000"
-                                                    class="add-to-cart btn btn-primary">
-                                                    <button class="add-to-cart" style="padding: 10px 20px; font-size: 20px; background-color: #6b6e6b; color: rgb(255, 255, 255); border: none; cursor: pointer; margin-top: 20px;border-radius: 25px;
+                                            <a href="#" data-name="Mercury" data-price="10000000" class="add-to-cart btn btn-primary">
+                                            <button class="add-to-cart" style="padding: 10px 20px; font-size: 20px; background-color: #6b6e6b; color: rgb(255, 255, 255); border: none; cursor: pointer; margin-top: 20px;border-radius: 25px;
                                             ">
-                                                        跟我回家
-                                                        <iconify-icon icon="arcticons:idealo-shopping" width="30"
-                                                            height="30"
-                                                            style="color: rgb(255, 255, 255);"></iconify-icon>
-                                                    </button>
-                                                </a>
+                                            跟我回家
+                                            <iconify-icon icon="arcticons:idealo-shopping" width="30" height="30" style="color: rgb(255, 255, 255);"></iconify-icon>
+                                            </button>
+                                            </a>
                                             </div>
-
+                                            
                                             <script>
                                                 // 當點擊"跟我回家"按鈕時，將數量保存並傳遞到購物車
-                                                document.querySelector('.add-to-cart').addEventListener('click', function (event) {
+                                                document.querySelector('.add-to-cart').addEventListener('click', function(event) {
                                                     event.preventDefault();  // 阻止默認的行為
-
+                                            
                                                     // 取得當前數量
                                                     var quantity = document.getElementById('quantity').value;
-
+                                            
                                                     // 將數量保存到 localStorage（你也可以選擇使用其他方式，例如傳遞給後端）
                                                     localStorage.setItem('cartQuantity', quantity);
-
+                                            
                                                     // 顯示保存的數量（這裡是為了調試方便）
                                                     console.log("加入購物車的數量: " + quantity);
-
+                                            
                                                     // 重置數量輸入框為 0
                                                     document.getElementById('quantity').value = 0;
                                                 });
@@ -159,92 +148,94 @@
                                                 const quantityInput = document.getElementById('quantity');
 
                                                 // 當點擊減號時
-                                                minusButton.addEventListener('click', function () {
-                                                    let currentQuantity = parseInt(quantityInput.value);  // 取得當前的數量
-                                                    if (currentQuantity > 1) {  // 確保數量不小於 1
-                                                        quantityInput.value = currentQuantity - 1;  // 更新數量
-                                                    }
+                                                minusButton.addEventListener('click', function() {
+                                                let currentQuantity = parseInt(quantityInput.value);  // 取得當前的數量
+                                                if (currentQuantity > 1) {  // 確保數量不小於 1
+                                                quantityInput.value = currentQuantity - 1;  // 更新數量
+                                                }
                                                 });
 
                                                 // 當點擊加號時
-                                                plusButton.addEventListener('click', function () {
-                                                    let currentQuantity = parseInt(quantityInput.value);  // 取得當前的數量
-                                                    quantityInput.value = currentQuantity + 1;  // 更新數量
+                                                plusButton.addEventListener('click', function() {
+                                                let currentQuantity = parseInt(quantityInput.value);  // 取得當前的數量
+                                                quantityInput.value = currentQuantity + 1;  // 更新數量
                                                 });
                                             </script>
-
+                                            
 
 
                                         </div>
                                     </div>
-
+        
                                 </div>
                             </article>
                         </div>
-
+        
                         <article class="introduce">
                             <!-- 商品頁面 -->
                             <h2 style=" border-bottom: 5px solid #5e5e5e;
                             font-weight: bold; width: 30%;font-size: 50px;">產品特色</h2><br>
                             <span style="font-weight: bold; width: 30%;font-size: 20px;color: #494949;">
-                                表面積： 74,800,000 平方公里
-                                半徑： 2,439.7 公里<br>
-                                質量： 3.285E23 公斤 (0.055 M⊕)<br>
-                                重力： 3.7 米/秒²<br>
-                                座標： 赤經 17h 7m 31s | 赤緯 -21° 22′ 25″<br>
-                                距離太陽： 58,000,000 公里<br>
-                                軌道週期： 88 天<br>
-                                絕對星等： -0.6<br><br>
-
-                                Mercury水星，一顆一年比一天短兩倍，需要88個地球日的神奇星座。<br>
-                                特徵：#一個太陽日=176個地球日 #水逆的元凶？！ #離太陽最近<br>
-                                距離太陽最近，日夜溫差極大，白天時赤道地區溫度可達432°C，夜間可降至-172°C。<br>
-                                在占星學中掌管人的思維、溝通、知識，因此人在諸事不順時才容易罵水星，都是因為他逆行才造成種種衰事。<br>
-                                但是！現在購買水星即可享有在順行的日子諸事順利全都成功的神奇魔法，親測有效！<br>
+                                表面積： 460,200,000 平方公里
+                                半徑： 6,051.8 公里
+                                質量： 4.867E24 公斤 (0.815 M⊕)<br>
+                                重力： 8.87 米/秒²<br>
+                                座標： 赤經 21h 57m 30s | 赤緯 -14° 3′ 33″<br>
+                                距離太陽： 108,200,000 公里<br>
+                                軌道週期： 225 天<br>
+                                絕對星等： -4.38<br><br>
+                            
+                                金星，唯一逆行旋轉的星座。<br>
+                                特徵： #逆行旋轉 #超熱表面 #愛與勇氣<br>
+                                因逆行旋轉的關係，與地球相反，金星上的太陽從西邊升起，從東邊落下。<br>
+                                有著四顆類地行星中最濃厚的大氣層，其中超過96%都是二氧化碳，大氣壓力是地球的92倍。 其表面的平均溫度高達462 °C，是太陽系中最熱的行星，比最靠近太陽的水星還要熱。<br>
+                                是古羅馬愛神維納斯的代表，各位感情不順的人們，現在只要購買金星達5年還沒交到男女朋友的話，本公司再送追人服務！保證購買金星後所有你想要的男神女神都能追到手。<br>
                             </span>
                         </article>
-
-
+        
+        
                         <article class="recommend">
                             <!-- 商品頁面 -->
-                            <h2 style=" border-bottom: 5px solid #5e5e5e;
+                            <h2  style=" border-bottom: 5px solid #5e5e5e;
                             font-weight: bold; width: 30%;font-size: 50px;">相關推薦</h2><br>
 
                             <div class="flex">
                                 <div class="card">
-                                    <a href="Venus.html"><img src="../assets/image/Venus.jpg"></a>
-                                    <div class="card-content">
-                                        <h3>Venus</h3>
+                                <a href="../page/Mercury.html"><img src="../assets/image/Mercury.jpg"></a>
+                                <div class="card-content">
+                                    <h3>Mercury</h3>
 
-                                    </div>
+                                </div>
                                 </div>
                                 <div class="card">
-                                    <a href="../page/Mars.html"><img src="../assets/image/mars.jpg"></a>
-                                    <div class="card-content">
-                                        <h3>Mars</h3>
+                                <a href="../page/Mars.html">
+                                <img src="../assets/image/mars.jpg">
+                                </a>
+                                <div class="card-content">
+                                    <h3>Mars</h3>
 
-                                    </div>
+                                </div>
                                 </div>
                                 <div class="card">
                                     <a href="../page/Jupiter.html">
-                                    <img src="../assets/image/Jupiter商品.jpg"></a>
-                                    <div class="card-content">
-                                        <h3>Jupiter</h3>
+                                <img src="../assets/image/Jupiter商品.jpg"></a>
+                                <div class="card-content">
+                                    <h3>Jupiter</h3>
 
-                                    </div>
+                                </div>
                                 </div>
                             </div>
-
+        
                         </article>
                     </div>
-
-
+        
+        
                 </div>
             </div>
-
+        
         </article>
 
-        <!-- 側欄 -->
+<!-- 側欄 -->
         <aside>
             <!-- 側邊選單 -->
             <!-- 菜單欄 -->
@@ -261,7 +252,7 @@
                             </i>太陽系
                         </a>
                         <div class="submenu-items">
-                            <a href="../page/Mercury.html">水星</a>
+                            <a href="#">水星</a>
                             <a href="#">金星</a>
                             <a href="#">火星</a>
                             <a href="#">木星</a>
@@ -279,20 +270,16 @@
                             </i>仙女星系
                         </a>
                         <div class="submenu-items">
-                            <a href="#">B612</a>
-                            <a href="#">M32</a>
-                            <a href="#">M110</a>
+                            <a href="#">橢圓星系M32</a>
+                            <a href="#">橢圓星系M110</a>
+                            <a href="#">矮橢球星系NGC 185</a>
                         </div>
                     </div>
-                    <div class="submenu">
-                        <a href="#"><i class="fas"><iconify-icon icon="carbon:star-review" width="24"
-                                    height="24" /></i>星系評價</a>
-                        <div class="submenu-items">
-                            <a href="../page/solarsystem.html">太陽系</a>
-                            <a href="../page/AndromedaGalaxy.html">仙女星系</a>
-                        </div>
-                    </div>
-                    <a href="../page/about.html"><i class="fas"><iconify-icon icon="mdi:about-circle-outline" width="24"
+                    <a href="#"><i class="fas"><iconify-icon icon="icon-park-outline:oval-love" width="24"
+                                height="24" /></i>收藏的愛妃</a>
+                    <a href="#"><i class="fas"><iconify-icon icon="carbon:star-review" width="24"
+                                height="24" /></i>星系評價</a>
+                    <a href="#"><i class="fas"><iconify-icon icon="mdi:about-circle-outline" width="24"
                                 height="24" /></i>關於我們</a>
                 </span>
                 <!-- 側欄箭頭按鈕 -->
@@ -310,7 +297,7 @@
 
     <footer style="margin-top: 0;">
         聯絡我們：a12345678@gmail.com
-        <a href="../page/about.html">關於我們</a>
+        關於我們
     </footer>
 </body>
 
