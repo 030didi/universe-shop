@@ -74,7 +74,7 @@ header {
 
 .container {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 0 auto;
     flex: 1;
 }
 
