@@ -15,7 +15,37 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../assets/JS/galaxy.js"></script>
 
+    <script>
+        // 監聽瀏覽器窗口大小變化
+        window.addEventListener('resize', function() {
+            // 刷新頁面
+            location.reload();
+        });
+    </script>
+
     <style>
+
+        body {
+            min-height: 100vh; /* 保證頁面至少滿足視窗高度 */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content-container {
+            max-height: calc(100vh - footer-height); /* 減去 footer 的高度 */
+            overflow-y: auto; /* 使內容區域可滾動 */
+        }
+
+        footer {
+            position: relative;
+            bottom: 0;
+        }
+
+        * {
+            box-sizing: border-box; /* 確保 padding 和 border 不會增加元素的總寬度和高度 */
+        }
+
+        
         body {
             background-image: linear-gradient(rgba(36, 36, 36, 0.858), rgba(0, 0, 0, 0.812)), url('../assets/image/仙女星系.jpg');
             /* 替換成你的圖片路徑 */
