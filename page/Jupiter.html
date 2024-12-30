@@ -46,14 +46,16 @@
         location.reload();
     });
     </script>
-    
+
 </head>
 
 <body>
     <header id="header">
         <!-- header 中內容 -->
 
-        <h1>KOSMOS</h1>
+        <a href="../page/index.html">
+            <h1>KOSMOS</h1>
+        </a>
 
         <div class="search">
             <form>
@@ -64,12 +66,12 @@
 
         <div class="icon">
             <div class="shop">
-                <a href="#">
+                <a href="../page/shop.html">
                     <iconify-icon icon="icon-park-twotone:shopping" width="30" height="30" style="color: white;" />
                 </a>
             </div>
             <div class="member">
-                <a href="#">
+                <a href="../page/login.html">
                     <iconify-icon icon="icon-park-outline:people" width="30" height="30" style="color: white;" />
                 </a>
             </div>
@@ -274,6 +276,7 @@
             <!-- 側邊選單 -->
             <!-- 菜單欄 -->
             <!-- 使用 checkbox 來做開關 -->
+
             <input type="checkbox" name="" id="sideMenu-active">
             <div class="sideMenu">
                 <p>KOSMOS</p>
@@ -286,7 +289,7 @@
                             </i>太陽系
                         </a>
                         <div class="submenu-items">
-                            <a href="#">水星</a>
+                            <a href="../page/Mercury.html">水星</a>
                             <a href="#">金星</a>
                             <a href="#">火星</a>
                             <a href="#">木星</a>
@@ -304,16 +307,20 @@
                             </i>仙女星系
                         </a>
                         <div class="submenu-items">
-                            <a href="#">橢圓星系M32</a>
-                            <a href="#">橢圓星系M110</a>
-                            <a href="#">矮橢球星系NGC 185</a>
+                            <a href="#">B612</a>
+                            <a href="#">M32</a>
+                            <a href="#">M110</a>
                         </div>
                     </div>
-                    <a href="#"><i class="fas"><iconify-icon icon="icon-park-outline:oval-love" width="24"
-                                height="24" /></i>收藏的愛妃</a>
-                    <a href="#"><i class="fas"><iconify-icon icon="carbon:star-review" width="24"
-                                height="24" /></i>星系評價</a>
-                    <a href="#"><i class="fas"><iconify-icon icon="mdi:about-circle-outline" width="24"
+                    <div class="submenu">
+                        <a href="#"><i class="fas"><iconify-icon icon="carbon:star-review" width="24"
+                                    height="24" /></i>星系評價</a>
+                        <div class="submenu-items">
+                            <a href="../page/solarsystem.html">太陽系</a>
+                            <a href="../page/AndromedaGalaxy.html">仙女星系</a>
+                        </div>
+                    </div>
+                    <a href="../page/about.html"><i class="fas"><iconify-icon icon="mdi:about-circle-outline" width="24"
                                 height="24" /></i>關於我們</a>
                 </span>
                 <!-- 側欄箭頭按鈕 -->
@@ -324,6 +331,7 @@
                 </a>
                 <!-- label 寫在 nav 下方是為了比較好看到 -->
             </div>
+
         </aside>
     </div>
 
@@ -331,7 +339,7 @@
 
     <footer style="margin-top: 0;">
         聯絡我們：a12345678@gmail.com
-        關於我們
+        <a href="../page/about.html">關於我們</a>
     </footer>
 </body>
 
