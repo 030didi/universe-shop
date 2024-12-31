@@ -233,7 +233,7 @@ header {
     .search-input {
         border-radius: 21px;
         /* 調整這個值來改變橢圓的形狀 */
-        padding: 2px 20px;
+        padding: 7px 20px;
         /* 調整內邊距來改變輸入框的高度和寬度 */
         border: 1px solid #a93535;
         /* 邊框顏色和樣式 */

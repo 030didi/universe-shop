@@ -22,11 +22,16 @@ header {
     justify-content: space-between;
     padding: 10px 10px;
     z-index: 1;
-    position: fixed; /* 固定 header */
-    top: 0; /* 距離頁面頂部為 0 */
-    left: 0; /* 距離頁面左邊為 0 */
-    right: 0; /* 距離頁面右邊為 0 */
-    width: 100%; /* 讓 header 填滿整個寬度 */
+    position: fixed;
+    /* 固定 header */
+    top: 0;
+    /* 距離頁面頂部為 0 */
+    left: 0;
+    /* 距離頁面左邊為 0 */
+    right: 0;
+    /* 距離頁面右邊為 0 */
+    width: 100%;
+    /* 讓 header 填滿整個寬度 */
 
     a {
         text-decoration: none;
@@ -53,7 +58,7 @@ header {
     .search-input {
         border-radius: 21px;
         /* 調整這個值來改變橢圓的形狀 */
-        padding: 2px 20px;
+        padding: 7px 20px;
         /* 調整內邊距來改變輸入框的高度和寬度 */
         border: 1px solid #a93535;
         /* 邊框顏色和樣式 */
@@ -323,16 +328,20 @@ footer {
 main {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* 垂直居中 */
-    align-items: center; /* 水平居中 */
-    min-height: calc(100vh - 120px); /* 確保頁面內容區域有足夠空間，扣掉 header 和 footer 高度 */
+    justify-content: center;
+    /* 垂直居中 */
+    align-items: center;
+    /* 水平居中 */
+    min-height: calc(100vh - 120px);
+    /* 確保頁面內容區域有足夠空間，扣掉 header 和 footer 高度 */
     padding: 50px;
 }
+
 /* 外層卡片置中 */
 .cardbuyer {
-     /* 設定與上方元素的間距 */
+    /* 設定與上方元素的間距 */
     margin-top: 30px;
-   
+
     color: white;
     display: flex;
     flex-direction: column;
@@ -486,10 +495,10 @@ h3 {
 }
 
 /*visa版面*/
-.visastyle{
+.visastyle {
     /* 設定與上方元素的間距 */
     margin-top: 30px;
-   
+
     color: white;
     display: flex;
     flex-direction: column;
@@ -503,6 +512,6 @@ h3 {
 
 }
 
-.card-body{
+.card-body {
     padding: 20px;
 }

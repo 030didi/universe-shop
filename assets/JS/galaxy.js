@@ -36,9 +36,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 初始調整高度
     adjustHeights();
+
+
+    const checkbox = document.getElementById('sideMenu-active');
+    const sideMenu1 = document.querySelector('.sideMenu');
+
+    if (!checkbox || !sideMenu1) {
+        console.error('Error: Missing #sideMenu-active or .sideMenu elements.');
+        return;
+    }
+
+    // 監聽 checkbox 狀態改變
+    checkbox.addEventListener('change', function () {
+        if (this.checked) {
+            // 當 checkbox 被選中，滾動至頂部
+            window.scrollTo({
+                top: 0,
+                behavior: 'auto', // 平滑滾動
+            });
+        } else {
+            // 當 checkbox 被取消選中，滾動至頂部
+            window.scrollTo({
+                top: 0,
+                behavior: 'auto', // 平滑滾動
+            });
+        }
+    });
 });
 
-document.querySelector('.add-to-cart').addEventListener('click', function(event) {
+document.querySelector('.add-to-cart').addEventListener('click', function (event) {
     event.preventDefault();
     var name = this.getAttribute('data-name');
     var price = this.getAttribute('data-price');

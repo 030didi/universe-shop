@@ -38,6 +38,31 @@ document.addEventListener('DOMContentLoaded', function () {
     adjustHeights();
 
 
+    const checkbox = document.getElementById('sideMenu-active');
+    const sideMenu1 = document.querySelector('.sideMenu');
+
+    if (!checkbox || !sideMenu1) {
+        console.error('Error: Missing #sideMenu-active or .sideMenu elements.');
+        return;
+    }
+
+    // 監聽 checkbox 狀態改變
+    checkbox.addEventListener('change', function () {
+        if (this.checked) {
+            // 當 checkbox 被選中，滾動至頂部
+            window.scrollTo({
+                top: 0,
+                behavior: 'auto', // 平滑滾動
+            });
+        } else {
+            // 當 checkbox 被取消選中，滾動至頂部
+            window.scrollTo({
+                top: 0,
+                behavior: 'auto', // 平滑滾動
+            });
+        }
+    });
+
     // 切換表單顯示的邏輯
     document.getElementById("loginSwitch").addEventListener("click", function () {
         document.getElementById("loginForm").classList.add("active");

@@ -45,7 +45,7 @@ header {
     .search-input {
         border-radius: 21px;
         /* 調整這個值來改變橢圓的形狀 */
-        padding: 2px 20px;
+        padding: 7px 20px;
         /* 調整內邊距來改變輸入框的高度和寬度 */
         border: 1px solid #a93535;
         /* 邊框顏色和樣式 */
@@ -279,12 +279,15 @@ footer {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 2);
     margin: 20px;
     position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 卡片浮動效果 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* 卡片浮動效果 */
 }
 
 .card:hover {
-    transform: translateY(-10px); /* 向上浮動 */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); /* 加強陰影 */
+    transform: translateY(-10px);
+    /* 向上浮動 */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    /* 加強陰影 */
     background-color: #477aa4;
 }
 
@@ -293,13 +296,17 @@ footer {
     color: white;
     position: relative;
     display: inline-block;
-    transition: transform 0.3s ease, color 0.3s ease; /* 添加浮動與顏色變化動畫 */
+    transition: transform 0.3s ease, color 0.3s ease;
+    /* 添加浮動與顏色變化動畫 */
 }
 
 .card:hover .sign {
-    transform: translateY(-5px); /* 向上浮動 */
-    color: #f39c12; /* 改變顏色 */
+    transform: translateY(-5px);
+    /* 向上浮動 */
+    color: #f39c12;
+    /* 改變顏色 */
 }
+
 * {
     margin: 0px;
     padding: 0px;
